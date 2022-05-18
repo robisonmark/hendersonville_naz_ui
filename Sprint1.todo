@@ -19,14 +19,15 @@ Global Styles
 ✔ normalize.css (install or cdn?) @done(22-05-14 21:25) // currently via npm
 ☐ body
 ☐ font
-☐ variables
+✔ color variables @done(22-05-17 22:50)
 ☐ helpers
 ✔ add sass dev dependency @done(22-05-14 21:23)
 ☐ Research on CSS Variables
-☐ Research PostCSS
+✔ Research PostCSS @done(22-05-17 22:50)
 ☐ Autoprefixer (?)
 ☐ Remove Full Bootstrap
-☐ Research modern grid
+✔ Research modern grid @done(22-05-17 22:50)
+☐ Global Variables import
 
 Route for Home Page
 ☐ 404
@@ -49,3 +50,4 @@ Concerns to work out
 ☐ Google Analytics - env = prod
 ☐ Server Side rendering for dynamic pages?
 ☐ Address - set once? component?
+☐ Google Maps -> Business Link
