@@ -6,9 +6,9 @@ import FullHeader from "@/components/global/HeaderNav.vue";
 <template>
   <FullHeader></FullHeader>
 
-  <body>
+  <main>
     <RouterView />
-  </body>
+  </main>
 </template>
 
 <style></style>

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="container header-container">
+    <div class="container container-flex header-container">
       <div class="nav-tophat">
         <a href="https://goo.gl/maps/9uSjb5EEQjSzH6ya6" class="location">
           <!-- <span class="material-icons-two-tone" style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" -25, "opsz" 48;'>directions_car</span> -->
@@ -47,15 +47,16 @@ header {
   position: fixed;
   height: 60px;
   color: $primary-accent;
+  z-index: 1;
 
   @media (max-width: 600px) {
     bottom: 0;
   }
 
   @media (min-width: 600px) {
+    height: 70px;
     flex-direction: row-reverse;
     top: 0;
-    height: 100px;
   }
 
   .header-container {
@@ -64,7 +65,6 @@ header {
     @media (min-width: 600px) {
       flex-direction: row-reverse;
       top: 0;
-      height: 100px;
     }
   }
 }
@@ -88,10 +88,10 @@ header {
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
     position: relative;
-    top: 1rem;
+    top: 1.5rem;
     left: 0;
     .logo {
-      width: 60px;
+      width: 50px;
     }
   }
 }
@@ -114,14 +114,14 @@ header {
 }
 
 // Global Styles
-.container {
-  display: flex;
-  max-width: 1640px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-right: auto;
-  margin-left: auto;
-}
+// .container {
+//   display: flex;
+//   max-width: 1640px;
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
 
 .flex-spacer {
   //move to global if not provided

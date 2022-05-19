@@ -1,7 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import FullHero from "../components/heros/FullWidth.vue";
+</script>
 
 <template>
-  <main>
-    <h1>Coming Soon</h1>
-  </main>
+  <FullHero></FullHero>
 </template>
