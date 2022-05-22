@@ -11,7 +11,7 @@
             <h2 v-for="(line, i) in tagline" :key="i" class="tagline">
               {{ line }}
             </h2>
-            <h3>{{ information }}</h3>
+            <h3 class="lower thin">{{ information }}</h3>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@ export default defineComponent({
       headline: "Hendersonville",
       headlineSecondLine: "Church of the Nazarene",
       tagline: ["To Seek", "To Serve", "To Share"], // define rules and use polymorphism to break or keep together(?) or always send as list
-      information: "Sunday School 9:30a | Worship Gathering 10:30a", // needs not in admin saying the style of this will be all lower case
+      information: "Sunday School 9:30a | Worship Gathering 10:30a", // needs note in admin saying the style of this will be all lower case
     };
   },
 });
@@ -42,7 +42,7 @@ export default defineComponent({
   background: right/cover no-repeat;
   position: relative;
   width: 100%;
-  height: 82vh;
+  height: 80vh;
   .content-container__circle {
     max-width: $content-max-width;
     height: 82vh;
@@ -52,7 +52,7 @@ export default defineComponent({
     position: relative;
     &:after {
       position: absolute;
-      right: -6rem;
+      right: -10rem;
       bottom: -8rem;
     }
   }
@@ -85,11 +85,16 @@ h1 {
 // Remember Circle can extend out of view box but content should never move past edge of top nav
 .content-container__circle:after {
   content: "";
-  height: 38rem;
-  width: 40rem;
+  height: 42rem;
+  width: 45rem;
   border-radius: 50%;
   background-color: $secondary-accent;
   mix-blend-mode: multiply;
+
+  @media (min-width: 1600px) {
+    height: 45rem;
+    width: 48rem;
+  }
 }
 
 .p2 {
