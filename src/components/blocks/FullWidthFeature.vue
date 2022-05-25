@@ -2,7 +2,11 @@
   <div class="feature--container__oval">
     <div class="container">
       <div class="row">
-        <div class="col"></div>
+        <div class="col">
+          <div class="feature-image_clip">
+            <img class="feature-image" :src="featureImage" />
+          </div>
+        </div>
         <div class="col content">
           <h3 class="feature-title">{{ featureBlockTitle }}</h3>
           <div class="feature-content" v-html="featureBlockContent"></div>
@@ -38,6 +42,7 @@ export default defineComponent({
         },
         link: "/",
       },
+      featureImage: "public/current_series.png",
     };
   },
 });
@@ -47,21 +52,31 @@ export default defineComponent({
 @import "../../assets/scss/variables";
 .feature--container__oval {
   width: 100%;
-  background-color: $secondary-accent;
-  clip-path: ellipse(80% 50% at 50% 50%);
-  max-height: 70vh;
-  height: 510px;
   margin-top: 10vh;
   margin-bottom: 10vh;
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: $secondary-accent;
+    clip-path: ellipse(80% 50% at 50% 50%);
+    max-height: 70vh;
+    height: 510px;
+    width: 100%;
+  }
   .content {
     display: flex;
     flex-flow: column;
     justify-content: center;
     height: inherit;
+    height: 510px;
   }
   .feature-content {
     color: $primary-accent;
     font-family: $montserrat;
+  }
+
+  .feature-image_clip {
+    clip-path: ellipse(45% 45% at 50% 50%);
   }
 }
 </style>

@@ -25,7 +25,7 @@ body {
 .w200, .extra_light { font-weight: 200; }
 .w300, .light { font-weight: 300; }
 .w400, .normal{ font-weight: 400; }
-.w500, .medium { font-weight: 500; }
+.w500, .medium,  { font-weight: 500; }
 .w600, .bold { font-weight: 600; }
 
 h1, .h1 {
@@ -65,14 +65,22 @@ h3, .h3 {
 		line-height: 1;
 		font-weight: 300;
 	}
-} // = 24px / 16 (base rem size)
+} // = px / 16 (base rem size)
+
 h4, .h4 {
 	font-size: 1.8rem;
 	font-family: $montserrat;
 	font-style: italic;
 	color: $church-primary;
-} // = 24px / 16 (base rem size)
-h5, .h5 { font-size: 1.125rem; }
+} // = px / 16 (base rem size)
+
+h5, .h5 {
+	font-size: 1.125rem;
+	font-family: $roboto;
+	color: $secondary;
+	font-weight: 500;
+
+}
 h6, .h6 { font-size: 0.875rem; }
 
 p {

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="35mm"
+   height="35mm"
+   viewBox="0 0 35 35"
+   version="1.1"
+   id="svg978"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="spotted_back_4.svg"
+   inkscape:export-filename="C:\Users\Mark\Documents\HCN\Web ReDesign\texture_back_church_primary_5.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview980"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4930696"
+     inkscape:cx="5.6929697"
+     inkscape:cy="67.980756"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1032" />
+  <defs
+     id="defs975">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2364">
+      <rect
+         style="fill:#020202;fill-opacity:1;stroke:none;stroke-width:1.29897;stroke-linejoin:round"
+         id="rect2366"
+         width="4.2333331"
+         height="4.2333331"
+         x="9.4595336e-08"
+         y="9.4595336e-08" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1032"
+       transform="translate(0.15577427,-0.02143413)"
+       inkscape:export-filename="C:\Users\Mark\Documents\HCN\Web ReDesign\texture_back_church_primary_4.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g2074"
+         style="stroke:none"
+         clip-path="url(#clipPath2364)"
+         inkscape:export-filename="C:\Users\Mark\Documents\HCN\Web ReDesign\texture_back_church_primary_4.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"
+         transform="matrix(8.267717,0,0,8.267717,0.02143252,0.02143328)">
+        <circle
+           style="fill:#54a3db;fill-opacity:1;stroke:none;stroke-width:0.121383;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1475-9-7"
+           cx="4.2333331"
+           cy="2.1166666"
+           r="0.42333332" />
+        <circle
+           style="fill:#54a3db;fill-opacity:1;stroke:none;stroke-width:0.121396;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1475-9-7-0"
+           cx="6.1080629e-09"
+           cy="2.1166666"
+           r="0.42333332" />
+        <circle
+           style="fill:#54a3db;fill-opacity:1;stroke:none;stroke-width:0.121396;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1475"
+           cx="2.1166666"
+           cy="6.1080629e-09"
+           r="0.42333332" />
+        <circle
+           style="fill:#54a3db;fill-opacity:1;stroke:none;stroke-width:0.121396;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1475-9"
+           cx="2.1166666"
+           cy="4.2333331"
+           r="0.42333332" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M -5.4999712,0.78571018 -5.7375115,1.7541436 -5.1893416,1.388697 -5.6278774,2.6677601 V 2.649488"
+           id="path1855" />
+      </g>
+      <path
+         style="fill:none;stroke:#f5d130;stroke-width:2.02975;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 18.388782,9.4707907 C 16.134,10.932607 13.920867,12.913326 14.481203,15.726809 c 0.76965,2.092701 4.043946,-0.394657 5.620945,0.877659 2.291582,2.250802 -3.041699,4.721353 -3.98709,6.592358 -1.175872,2.327151 1.354305,2.36332 1.765902,2.375249"
+         id="path1970"
+         sodipodi:nodetypes="cccsc"
+         inkscape:export-filename="C:\Users\Mark\Documents\HCN\Web ReDesign\texture_back_church_primary_3.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </g>
+  </g>
+</svg>
