@@ -51,6 +51,7 @@ export default defineComponent({
   &-circle {
     display: grid;
     grid-template-columns: 45% 10% 45%;
+    height: 220px;
   }
   &-image_circle {
     grid-column: 1/3;

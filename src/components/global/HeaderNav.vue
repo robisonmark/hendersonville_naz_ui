@@ -47,7 +47,7 @@ header {
   position: fixed;
   height: 60px;
   color: $primary-accent;
-  z-index: 1;
+  z-index: 2;
 
   @media (max-width: 600px) {
     bottom: 0;
