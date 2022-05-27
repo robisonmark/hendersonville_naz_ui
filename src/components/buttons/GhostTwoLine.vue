@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-const content = defineProps(["content"]);
+const content = defineProps(["modelView", "content"]);
 
 console.log(content);
 </script>

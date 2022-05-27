@@ -4,9 +4,15 @@
       <img :src="tileImage.url" :alt="tileImage.alt" />
     </div>
     <div class="tile-content">
-      <h5 class="tile-headline">{{ tileContent.headline }}</h5>
-      <div class="tile-description">{{ tileContent.description }}</div>
-      <div class="tile-details">{{ tileContent.details }}</div>
+      <div class="tile-content_flextop">
+        <h5 class="tile-headline">{{ tileContent.headline }}</h5>
+        <div class="tile-description">{{ tileContent.description }}</div>
+      </div>
+      <div class="tile-details">
+        <template v-for="(line, i) in tileContent.details.lines" :key="i">
+          <span>{{ line }}</span>
+        </template>
+      </div>
     </div>
     <button class="tile-cta" :url="tileButton.url">{{ tileButton.cta }}</button>
   </div>
@@ -26,7 +32,9 @@ export default defineComponent({
         headline: "Men's Softball",
         description:
           "The men of HCN play softball Monday nights in Goodlettsville. Come join us.",
-        details: "Monday Nights April - May",
+        details: {
+          lines: ["Monday Nights", "April - May"],
+        },
       },
       tileButton: {
         url: "/",
@@ -42,16 +50,16 @@ export default defineComponent({
 .tile {
   &-circle {
     display: grid;
+    grid-template-columns: 45% 10% 45%;
   }
   &-image_circle {
-    grid-column: 1/2;
-    clip-path: ellipse(45% 45% at 50% 50%);
+    grid-column: 1/3;
+    clip-path: ellipse(50% 50% at 50% 50%);
     height: 150px;
     width: 150px;
-    margin: auto;
   }
   &-content {
-    grid-column: 2/2;
+    grid-column: 3/3;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -61,20 +69,36 @@ export default defineComponent({
     font-weight: 300;
     color: $primary;
     font-size: 0.8rem;
+    padding-top: 0.7rem;
   }
   &-details {
     font-family: $montserrat;
     font-style: italic;
-    font-weight: 200;
+    font-weight: 300;
     color: $primary;
     font-size: 0.8rem;
+    span {
+      display: block;
+    }
   }
   &-cta {
-    border-radius: 15px;
+    border-radius: 7px;
+    font-family: $montserrat;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
     background-color: $primary;
     color: $primary-accent;
     width: 100%;
     text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 1rem auto;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    &:hover {
+      mix-blend-mode: darken;
+    }
   }
 }
 </style>

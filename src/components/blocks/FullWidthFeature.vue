@@ -42,7 +42,7 @@ export default defineComponent({
         },
         link: "/",
       },
-      featureImage: "public/current_series.png",
+      featureImage: "/current_series.png",
     };
   },
 });
@@ -52,15 +52,15 @@ export default defineComponent({
 @import "../../assets/scss/variables";
 .feature--container__oval {
   width: 100%;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   &:before {
     content: "";
     position: absolute;
     background-color: $secondary-accent;
     clip-path: ellipse(80% 50% at 50% 50%);
     max-height: 70vh;
-    height: 510px;
+    height: 400px;
     width: 100%;
   }
   .content {
@@ -68,7 +68,7 @@ export default defineComponent({
     flex-flow: column;
     justify-content: center;
     height: inherit;
-    height: 510px;
+    height: 400px;
   }
   .feature-content {
     color: $primary-accent;
@@ -76,7 +76,12 @@ export default defineComponent({
   }
 
   .feature-image_clip {
-    clip-path: ellipse(45% 45% at 50% 50%);
+    position: absolute;
+    top: -1rem;
+    img {
+      clip-path: ellipse(50% 50% at 50% 50%);
+      max-height: 430px;
+    }
   }
 }
 </style>

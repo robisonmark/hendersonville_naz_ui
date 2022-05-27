@@ -9,5 +9,6 @@ import CircleImageTile from "@/components/cards/CircleImageTile.vue";
   <full-hero></full-hero>
   <content-left></content-left>
   <full-width-feature></full-width-feature>
+  <content-left></content-left>
   <circle-image-tile></circle-image-tile>
 </template>
