@@ -7,6 +7,9 @@ html {
 	$min-vw : 600px; // Minimum Window width
 	$max-vw : 1240px; // Maximum Window width
     // font sizing
+	// font-size: calc( (100vw - $min-vw) / (unit($max-vw) - unit($min-vw)") * ("unit($max-fs) - unit($min-fs)") +" $min-fs);
+  	@media (max-width: $min-vw) { font-size: $min-fs; }
+  	@media (min-width: $max-vw) { font-size: $max-fs; }
 }
 
 body {
@@ -32,15 +35,19 @@ h1, .h1 {
 	font-size: 3.6rem;
 	color: $primary-accent;
 	font-family: $montserrat;
-	letter-spacing: .19;
+	letter-spacing: .19px;
 	line-height: 1;
 	span.headline_break {
 		font-family: $roboto;
 		letter-spacing: .6px;
 		font-weight: 300;
 		font-style: italic;
-		font-size: 2.1rem;
+		font-size: .585em;
 		line-height: 1;
+	}
+
+	@media (max-width: 600px) {
+		font-size: 2.8rem;
 	}
 }
 h2, .h2 {
@@ -50,6 +57,9 @@ h2, .h2 {
 	color: $whiteish;
 	font-style: italic;
 	font-weight: 300;
+	@media (max-width: 600px) {
+		font-size: 1.45rem;
+	}
 } // = 36px / 16 (base rem size)
 
 h3, .h3 {
@@ -58,6 +68,10 @@ h3, .h3 {
 	color: $primary-accent;
 	font-style: italic;
 	line-height: 2;
+
+	@media (max-width: 600px) {
+		font-size: 1rem;
+	}
 
 	&.feature-title {
 		font-size: 3.6rem;

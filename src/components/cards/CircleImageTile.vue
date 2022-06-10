@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4 tile-circle">
+  <div class="col-4 card tile-circle">
     <div class="tile-image_circle">
       <img :src="tileImage.url" :alt="tileImage.alt" />
     </div>

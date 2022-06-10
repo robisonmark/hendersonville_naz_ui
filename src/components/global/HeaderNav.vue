@@ -1,24 +1,55 @@
 <template>
   <header>
     <div class="container container-flex header-container">
-      <div class="nav-tophat">
-        <a href="https://goo.gl/maps/9uSjb5EEQjSzH6ya6" class="location">
-          <!-- <span class="material-icons-two-tone" style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" -25, "opsz" 48;'>directions_car</span> -->
-          <span class="material-icons-outlined">location_on</span>
-          <span class="desktop">159 Luna Lane, Hendersonville Tn. 37072</span>
-        </a>
+      <div class="mobile flex-g-1" @click="openNav = !openNav">
+        <!-- <span class="material-icons-two-tone">menu</span> -->
+        <GoogleIcon icon="menu" fillName="primary-accent"></GoogleIcon>
       </div>
-      <nav id="nav-header">
-        <span class="material-icons-two-tone">menu</span>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+      <div class="grid flex-g-1">
+        <div class="nav-tophat">
+          <a href="https://goo.gl/maps/9uSjb5EEQjSzH6ya6" class="location">
+            <GoogleIcon
+              icon="location_on"
+              fillName="primary-accent"
+            ></GoogleIcon>
+            <address class="desktop">
+              159 Luna Lane, Hendersonville Tn. 37072
+            </address>
+          </a>
+        </div>
+        <nav id="nav-header" :class="{ open: openNav }">
+          <ul>
+            <li class="top-level"><RouterLink to="/">Home</RouterLink></li>
+            <li
+              class="top-level dropdown"
+              :class="{ expand: openMenu.includes('about') }"
+            >
+              <span class="clickable" @click.stop.prevent="toggleMenu('about')">
+                Who We Are
+                <span class="material-icons-two-tone mobile">add</span>
+                <span class="material-icons-two-tone desktop">expand_more</span>
+              </span>
+              <ul>
+                <li><RouterLink to="/">Beliefs</RouterLink></li>
+                <li><RouterLink to="/">Ministries</RouterLink></li>
+                <li><RouterLink to="/">Leadership</RouterLink></li>
+                <li><RouterLink to="/">Mission</RouterLink></li>
+              </ul>
+            </li>
+            <li class="top-level"><RouterLink to="/">Events</RouterLink></li>
+            <li><button class="connect">Connect With Us</button></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile flex-g-1">
+        <GoogleIcon icon="smartphone" fillName="primary-accent"></GoogleIcon>
+      </div>
       <div class="flex-spacer"></div>
       <div class="logo-container">
         <img
           alt="Hendersonville Church of the Nazarene Logo"
           class="logo"
-          src="@/assets/images/HCNLogo.svg"
+          src="@/assets/images/HCNLogo.svg?url"
         />
       </div>
     </div>
@@ -26,15 +57,25 @@
 </template>
 
 <script lang="ts" setup>
-// import { defineComponent } from "vue";
+// Vue
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
-// export default defineComponent({
-//   name: 'nav-main',
-//   setup() {
-//     return {};
-//   },
-// });
+// Internal
+import GoogleIcon from "../elements/googleIcon.vue";
+
+const openMenu = ref<string[]>([]);
+const openNav = ref(false);
+
+function toggleMenu(menuName: string) {
+  const index = openMenu.value.indexOf(menuName);
+  console.log(openMenu.value);
+  if (index === -1) {
+    openMenu.value = [...openMenu.value, menuName];
+  } else {
+    openMenu.value.splice(index, 1);
+  }
+}
 </script>
 
 <style scoped lang="scss">
@@ -97,37 +138,204 @@ header {
 }
 
 .location {
+  font-family: $montserrat;
   color: $primary-accent;
   fill: $primary-accent;
-  font-variation-settings: "wght" 100, "FILL" $primary-accent;
-  display: inline-flex;
-  align-items: center;
+  @media (min-width: 600px) {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    .material-icons-outlined {
+      font-size: 0.9rem;
+      padding-right: 5px;
+    }
+  }
 }
 
 #nav-header {
   display: flex;
-  justify-content: space-between;
+  font-family: $roboto;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 60px;
+    background: $secondary;
+    max-width: 55%;
+    left: 0;
+    font-weight: 400;
+    height: 0;
+
+    &.open {
+      height: calc(100vh - 60px);
+    }
+
+    ul {
+      overflow-y: scroll;
+      padding-left: 1rem;
+    }
+    .top-level {
+      padding-top: 1rem;
+      padding-left: 0.5rem;
+      font-size: 1.1rem;
+      &:not(:first-child):before {
+        content: "";
+        display: block;
+        height: 2px;
+        width: calc(100% - 0.5rem);
+        background-color: $church-primary;
+        margin-bottom: 1rem;
+        position: relative;
+        left: -0.5rem;
+      }
+      &:last-child {
+        padding-bottom: 1rem;
+      }
+    }
+
+    .dropdown {
+      .clickable {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+      span:not(.clickable) {
+        font-size: 1.2rem;
+        padding-left: 0.3rem;
+        padding-right: 1rem;
+        flex-grow: 1;
+      }
+
+      ul {
+        display: none;
+      }
+
+      &.expand {
+        ul {
+          // remove override
+          display: block;
+          padding-left: 0rem;
+        }
+        li {
+          text-transform: none;
+          font-family: $roboto;
+          font-size: 0.9rem;
+          padding-bottom: 1rem;
+          padding-top: 1rem;
+          display: flex;
+          align-items: center;
+          &:before {
+            content: "";
+            display: inline-block;
+            height: 1px;
+            width: 0.7rem;
+            margin-right: 0.5rem;
+            background-color: $primary-accent;
+          }
+        }
+      }
+    }
+  }
 
   @media (min-width: 600px) {
+    justify-content: flex-end;
     flex-flow: row;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      height: inherit;
+      align-items: center;
+    }
+
+    li {
+      display: inline-block;
+      height: inherit;
+      &:not(:last-child) {
+        padding-right: 1rem;
+      }
+      &:not(:first-child) {
+        padding-left: 1rem;
+      }
+    }
+
+    .dropdown {
+      .clickable {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        height: calc(70px * 0.5);
+      }
+      span:not(.clickable) {
+        font-size: 1.2rem;
+        padding-left: 0.3rem;
+        flex-grow: 1;
+      }
+
+      ul {
+        display: none;
+      }
+
+      &.open {
+        position: relative;
+        background-color: $secondary-accent;
+        ul {
+          // remove override
+          display: block;
+          padding-left: 0rem;
+          position: absolute;
+          left: 0;
+          background-color: $secondary-accent;
+          width: 100%;
+        }
+        li {
+          text-transform: none;
+          font-family: $roboto;
+          font-size: 0.9rem;
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
   }
 }
 
-// Global Styles
-// .container {
-//   display: flex;
-//   max-width: 1640px;
-//   padding-left: 1rem;
-//   padding-right: 1rem;
-//   margin-right: auto;
-//   margin-left: auto;
-// }
+.connect {
+  border: 2px solid $primary-accent;
+  padding: 5px;
+}
 
+// Global Styles
+.grid {
+  @media (max-width: 600px) {
+    flex-grow: 1;
+  }
+  @media (min-width: 600px) {
+    display: grid;
+    height: inherit;
+    grid-template-rows: 50%;
+    .nav-tophat {
+      grid-row: 1 / 2;
+      align-self: end;
+      text-align: right;
+    }
+    #nav-header {
+      grid-row: 2 / 2;
+      align-self: center;
+    }
+  }
+}
 .flex-spacer {
   //move to global if not provided
   flex-grow: 1;
   @media (max-width: 600px) {
-    display: none;
+    // display: none;
+    flex-basis: min-content;
   }
 }
 
@@ -136,5 +344,14 @@ header {
   @media (min-width: 600px) {
     display: inline-block;
   }
+}
+
+@media (min-width: 600px) {
+  .mobile {
+    display: none;
+  }
+}
+.flex-g-1 {
+  flex-grow: 1;
 }
 </style>

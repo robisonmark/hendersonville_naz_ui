@@ -1,13 +1,13 @@
 <template>
   <div class="container content_left">
     <div class="row">
-      <div class="col">
+      <div class="col-auto col-sm-4">
         <div :class="accent ? 'accent' : null">
           <h4>{{ sectionTitle }}</h4>
           <div class="content" v-html="sectionContent"></div>
         </div>
       </div>
-      <div class="col">
+      <div class="col col-sm-4">
         <component :is="dynamicComponent" v-model="twoLineButton"></component>
         <!-- <GhostTwoLineButton
           v-model:content="twoLineButton"
@@ -60,12 +60,11 @@ export default defineComponent({
     width: 100px;
     position: absolute;
     top: -1.2rem;
-    // left: -1rem;
-    // opacity: 0.55;
+    // cut off bottom for title display
+    clip-path: inset(0% 0% 52% 0%);
   }
 
   h4 {
-    background-color: $background;
     position: relative;
     left: 0;
   }

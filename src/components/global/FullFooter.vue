@@ -3,7 +3,7 @@
     <div clas="container">
       <div class="location"></div>
       <div class="office_hours"></div>
-      <div class="quick_links">
+      <nav class="quick_links">
         <ul>
           <li>Ministry</li>
           <li>The Cove</li>
@@ -14,6 +14,16 @@
           <li>Get Involved</li>
           <li>Nazarene</li>
         </ul>
+      </nav>
+      <div class="disclaimer">
+        &copy; Copyright {{ new Date().getFullYear() }} Hendersonville Church of
+        the Nazarene, All Rights Reseerved
+        <a href="">Privacy Policy</a>
+        <a href="">Terms and Conditions</a>
+        <img
+          src="@/assets/images/robros-logo-optimized.png"
+          alt="Robros Tech"
+        />
       </div>
     </div>
   </footer>

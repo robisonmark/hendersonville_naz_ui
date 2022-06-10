@@ -14,11 +14,15 @@
   },
   "dependencies": {
     "@drewbot/sass-flexbox-grid": "^2.0.7",
+    "@material-design-icons/font": "^0.11.1",
+    "@material-design-icons/svg": "^0.11.1",
+    "@svgv/webpack": "^0.1.0",
     "bootstrap": "^5.2.0-beta1",
     "material-icons": "^1.10.11",
     "normalize.css": "^8.0.1",
     "pinia": "^2.0.13",
     "the-new-css-reset": "^1.6.0",
+    "vite-svg-loader": "^3.3.0",
     "vue": "^3.2.33",
     "vue-router": "^4.0.14"
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4 full-image_container">
+  <div class="col-4 card full-image_container">
     <div
       class="full-image"
       :style="{ backgroundImage: 'url(' + cardImage + ')' }"
