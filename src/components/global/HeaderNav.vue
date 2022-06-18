@@ -62,7 +62,7 @@ import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
 // Internal
-import GoogleIcon from "../elements/googleIcon.vue";
+import GoogleIcon from "../elements/googleIcons.vue";
 
 const openMenu = ref<string[]>([]);
 const openNav = ref(false);
