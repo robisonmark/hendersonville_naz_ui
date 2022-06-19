@@ -1,8 +1,10 @@
 <template>
   <div class="col">
-    <div class="" :style="{ backgroundImage: 'url(' + heroImage + ')' }"></div>
+    <div class="">
+      <img :src="heroImage" :alt="heroImage" />
+    </div>
     <div class="content">
-      <h3>Event Name</h3>
+      <h5 class="event-title">Event Name</h5>
       <div class="">9:30 | Cafe</div>
       <div class="">
         This is the event description. It will be controlled by a WYSIWYG

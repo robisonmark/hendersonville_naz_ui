@@ -94,8 +94,11 @@ h5, .h5 {
 	font-family: $roboto;
 	color: $secondary;
 	font-weight: 500;
-
+	&.event-title {
+		font-family: $montserrat;
+	}
 }
+
 h6, .h6 {
 	font-size: 1.5rem;
 	font-family: $montserrat;
