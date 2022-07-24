@@ -8,13 +8,8 @@
       <div class="grid flex-g-1">
         <div class="nav-tophat">
           <a href="https://goo.gl/maps/9uSjb5EEQjSzH6ya6" class="location">
-            <GoogleIcon
-              icon="location_on"
-              fillName="primary-accent"
-            ></GoogleIcon>
-            <address class="desktop">
-              159 Luna Lane, Hendersonville Tn. 37072
-            </address>
+            <GoogleIcon icon="location_on" fillName="primary-accent"></GoogleIcon>
+            <address class="desktop">159 Luna Lane, Hendersonville Tn. 37072</address>
           </a>
         </div>
         <nav id="nav-header" :class="{ open: openNav }">
@@ -36,7 +31,9 @@
                 <li><RouterLink to="/">Mission</RouterLink></li>
               </ul>
             </li>
-            <li class="top-level"><RouterLink to="/">Events</RouterLink></li>
+            <li class="top-level">
+              <RouterLink to="/events">Events</RouterLink>
+            </li>
             <li><button class="connect">Connect With Us</button></li>
           </ul>
         </nav>
@@ -318,7 +315,7 @@ header {
   @media (min-width: 600px) {
     display: grid;
     height: inherit;
-    grid-template-rows: 50%;
+    grid-template-rows: 45% 45%;
     .nav-tophat {
       grid-row: 1 / 2;
       align-self: end;

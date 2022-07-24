@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import EventCardLarge from "@/components/cards/EventCardLarge.vue";
 import EventCardSmall from "@/components/cards/EventCardSmall.vue";
-import ContentCircle from "@/components/elements/ContentCircle.vue";
+import ContentCircle from "@/components/elements/contentCircle.vue";
 </script>
 
 <template>
@@ -14,13 +14,13 @@ import ContentCircle from "@/components/elements/ContentCircle.vue";
         <event-card-large></event-card-large>
         <event-card-large></event-card-large>
       </div>
-      <ContentCircle></ContentCircle>
+      <content-circle></content-circle>
       <!-- Circle Containter with Header needs order to know where to go ie/ flex row -->
     </div>
     <!-- Feature Block -->
     <div class="row">
       <!-- Picture / Accent Block  -->
-      <div class="col-auto offset-8 col-sm-4">
+      <div class="col-auto offset-7 col-sm-5 text-right">
         <h4>Weekly Events</h4>
         <!-- Event Card -->
         <event-card-small></event-card-small>

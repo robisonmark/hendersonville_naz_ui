@@ -6,6 +6,10 @@
 @import "./scss/layout";
 @import "./scss/typography";
 
+html {
+  // font-size: 14px;
+}
+
 body {
   background-color: $background;
   overflow-x: hidden;
