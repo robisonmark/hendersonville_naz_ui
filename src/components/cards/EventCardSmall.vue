@@ -27,16 +27,17 @@ const heroImage = "/Hero_Image_Placeholder.jpg";
 .event-card {
   display: grid;
   grid-template-columns: 130px 1rem calc(100% - 130px - 1rem);
+  min-height: 130px;
 
   &-image_container {
-    // width: 130px;
     grid-area: 1/1;
   }
 
   &-image {
-    width: 100%;
-    height: 100%;
+    width: 130px;
+    height: 130px;
     background-size: cover;
+    clip-path: circle(50% at 50% 50%);
   }
 
   &-content {
