@@ -38,6 +38,9 @@ h1, .h1 {
 	font-family: $montserrat;
 	letter-spacing: .19px;
 	line-height: 1;
+	display: flex;
+	flex-flow: column;
+
 	span.headline_break {
 		font-family: $roboto;
 		letter-spacing: .6px;

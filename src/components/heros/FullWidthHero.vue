@@ -7,7 +7,7 @@
             {{ headline }}
             <span class="headline_break">{{ headlineSecondLine }}</span>
           </h1>
-          <div class="p2">
+          <div class="pt-2">
             <h2 v-for="(line, i) in tagline" :key="i" class="tagline">
               {{ line }}
             </h2>
@@ -61,7 +61,10 @@ export default defineComponent({
 .hero_content {
   z-index: 1;
   text-align: right;
-  margin-top: 7rem;
+  text-align: right;
+  margin-top: 4rem;
+  position: absolute;
+  top: 50%;
 }
 .tagline {
   display: inline;
@@ -95,9 +98,5 @@ h1 {
     height: 45rem;
     width: 48rem;
   }
-}
-
-.p2 {
-  padding-top: 2rem;
 }
 </style>
