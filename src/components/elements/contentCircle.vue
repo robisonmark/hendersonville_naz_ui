@@ -33,7 +33,7 @@ $circle-width: 43rem;
   position: absolute;
   text-align: right;
   z-index: 1;
-  top: 13rem;
+  top: 15rem;
   right: 7rem;
 }
 .circle-container {
