@@ -23,6 +23,7 @@ body {
 .lower { text-transform: lowercase; }
 .upper { text-transform: uppercase; }
 .text-right { text-align: right; }
+.italic { font-style: italic }
 
 // Font weight
 .w100, .thin { font-weight: 100; }
@@ -117,4 +118,23 @@ p {
 	font-weight: 300;
 	line-height: inherit;
 	// padding-top: .5rem;
+}
+
+.tagline {
+	display: inline;
+	line-height: 0.9;
+	&:not(:first-child):before {
+		content: "•";
+		display: inline;
+		vertical-align: middle;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	&__cta {
+		color: $whiteish;
+		font-family: $roboto;
+		font-weight: 500;
+		font-size: 1.3rem;
+	}
 }

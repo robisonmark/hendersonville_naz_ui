@@ -66,17 +66,6 @@ export default defineComponent({
   position: absolute;
   top: 50%;
 }
-.tagline {
-  display: inline;
-  line-height: 0.9;
-  &:not(:first-child):before {
-    content: "•";
-    display: inline;
-    vertical-align: middle;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
 
 h1 {
   display: flex;

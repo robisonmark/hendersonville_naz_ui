@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="col col-sm-6">
-        <component v-for="(block, index) in rightSideComponents" :key="index" :is="block.componentName" v-model="block.componentContent"></component>
+        <component v-for="(block, index) in rightSideComponents" :key="index" :is="block.componentName" v-model="block.componentContent" :componentClass="block.componentClass"></component>
       </div>
     </div>
   </div>
@@ -36,10 +36,11 @@ export default defineComponent({
       rightSideComponents: [
         {
           componentName: "wysiwygEditor",
-          componentContent: "<p>There is no <span class='italic'>US</span> without <span class='italic'>U</span></p>"
+          componentContent: "<p>There is no <em class='italic'>US</em> without <em class='italic'>U</em></p>",
+          componentClass: "tagline__cta"
         },
         {
-          componentName: "GhostTwoLineButton",
+          componentName: "GßhostTwoLineButton",
           componentContent: {
             action: "Join Us Live",
             description: "Next Live Gathering at 10:30a",
