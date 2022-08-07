@@ -1,15 +1,16 @@
+@use "sass:map";
+
 $cols: 12;
-$breakpoint-xs: 320px;
-$breakpoint-sm: 600px;
-$breakpoint-md: 1080px;
-$breakpoint-lg: 1360px;
-$breakpoint-xl: 1600px;
-$xs: 'xs';
-$sm: 'sm';
-$md: 'md';
-$lg: 'lg';
-$xl: 'xl';
-$breakpoints: 'xs', 'sm', 'md', 'lg', 'xl';
+$breakpoint-names: 'xs', 'sm', 'md', 'lg', 'xl', 'xxl';
+
+$breakpoints: (
+  "xs": 320px,
+  "sm": 481px,
+  "md": 768px,
+  "lg": 1025px,
+  "xl": 1366px,
+  "xxl": 1920px,
+);
 
 .container {
   width: 100%;
@@ -70,83 +71,16 @@ $breakpoints: 'xs', 'sm', 'md', 'lg', 'xl';
     margin-left: percentage(calc($i / $cols));
   }
 
-  @each $breakpoint in $breakpoints{
-    @media (min-width: $breakpoint) {
-      .col-#{$breakpoint}-#{$i} {
+  @each $breakpoint-name in $breakpoint-names {
+    @media (min-width: map.get($breakpoints, $breakpoint-name)) {
+      .col-#{$breakpoint-name}-#{$i} {
         -ms-flex: 0 0 percentage(calc($i / $cols));
         flex: 0 0 percentage(calc($i / $cols));
         max-width: calc($content-max-width * ($cols / $i));
       }
     }
   }
-
-  // @media (min-width: $breakpoint-sm) {
-  //   .col-sm-#{$i} {
-  //     -ms-flex: 0 0 percentage(calc($i / $cols));
-  //     flex: 0 0 percentage(calc($i / $cols));
-  //     max-width: calc($content-max-width * ($cols / $i));
-  //   } 
-  // }
-
-  // @media (min-width: $breakpoint-md) {
-  //   .col-md-#{$i} {
-  //     -ms-flex: 0 0 percentage(calc($i / $cols));
-  //     flex: 0 0 percentage(calc($i / $cols));
-  //     max-width: calc($content-max-width * ($cols / $i));
-  //   } 
-  // }
-
-  // @media (min-width: $breakpoint-lg) {
-  //   .col-lg-#{$i} {
-  //     -ms-flex: 0 0 percentage(calc($i / $cols));
-  //     flex: 0 0 percentage(calc($i / $cols));
-  //     max-width: calc($content-max-width * ($cols / $i));
-  //   } 
-  // }
-
-  // @media (min-width: $breakpoint-xl) {
-  //   .col-xl-#{$i} {
-  //     -ms-flex: 0 0 percentage(calc($i / $cols));
-  //     flex: 0 0 percentage(calc($i / $cols));
-  //     max-width: calc($content-max-width * ($cols / $i));
-  //   } 
-  // }
 }
-
-// @media (min-width: 600px) {
-// .col-sm {
-//   &-3 {
-//     -ms-flex: 0 0 25%;
-//     flex: 0 0 25%;
-//     max-width: 25%;
-//   }
-
-//   &-4 {
-//     -ms-flex: 0 0 33.333333%;
-//     flex: 0 0 33.333333%;
-//     max-width: calc($content-max-width * .333333);  
-//   }
-// }
-
-
-// .col-sm-5 {
-//   -ms-flex: 0 0 41.666667%;
-//   flex: 0 0 41.666667%;
-//   max-width: 41.666667%;
-// }
-
-// .col-sm-6 {
-//   -ms-flex: 0 0 50%;
-//   flex: 0 0 50%;
-//   max-width: 50%;
-// }
-
-// .col-sm-12 {
-//     -ms-flex: 0 0 100%;
-//     flex: 0 0 100%;
-//     max-width: 100%;
-//   }
-// }
 
 // padding
 .p {

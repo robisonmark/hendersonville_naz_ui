@@ -1,7 +1,7 @@
 <template>
   <div class="container content_left">
     <div class="row">
-      <div class="col-auto col-sm-4">
+      <div class="col-auto col-sm-6">
         <div :class="accent ? 'accent' : null">
           <h4>{{ sectionTitle }}</h4>
           <div class="content" v-html="sectionContent"></div>

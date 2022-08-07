@@ -60,7 +60,7 @@ export default defineComponent({
     background-color: $secondary-accent;
     clip-path: ellipse(80% 50% at 50% 50%);
     max-height: 70vh;
-    height: 400px;
+    height: 550px;
     width: 100%;
   }
   .content {
@@ -68,7 +68,7 @@ export default defineComponent({
     flex-flow: column;
     justify-content: center;
     height: inherit;
-    height: 400px;
+    height: 550px;
   }
   .feature-content {
     color: $primary-accent;
@@ -77,10 +77,11 @@ export default defineComponent({
 
   .feature-image_clip {
     position: absolute;
-    top: -1rem;
+    top: -3rem;
+    left: -5rem;
     img {
       clip-path: ellipse(50% 50% at 50% 50%);
-      max-height: 430px;
+      max-height: 630px;
     }
   }
 }
