@@ -11,7 +11,7 @@
           <h3 class="feature-title">{{ featureBlockTitle }}</h3>
           <div class="feature-content" v-html="featureBlockContent"></div>
           <ghost-two-line-button
-            :content="featureBlockCTA.content"
+            v-model="featureBlockCTA.content"
           ></ghost-two-line-button>
         </div>
       </div>
@@ -52,8 +52,8 @@ export default defineComponent({
 @import "../../assets/scss/variables";
 .feature--container__oval {
   width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   &:before {
     content: "";
     position: absolute;
@@ -67,12 +67,16 @@ export default defineComponent({
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: flex-start;
     height: inherit;
     height: 550px;
   }
   .feature-content {
     color: $primary-accent;
     font-family: $montserrat;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    line-height: 1.2;
   }
 
   .feature-image_clip {

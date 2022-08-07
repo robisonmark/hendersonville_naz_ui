@@ -7,11 +7,8 @@
           <div class="content" v-html="sectionContent"></div>
         </div>
       </div>
-      <div class="col col-sm-4">
-        <component :is="dynamicComponent" v-model="twoLineButton"></component>
-        <!-- <GhostTwoLineButton
-          v-model:content="twoLineButton"
-        ></GhostTwoLineButton> -->
+      <div class="col col-sm-6">
+        <component v-for="(block, index) in rightSideComponents" :key="index" :is="block.componentName" v-model="block.componentContent"></component>
       </div>
     </div>
   </div>
@@ -22,10 +19,12 @@ import { defineComponent } from "vue";
 
 // components
 import GhostTwoLineButton from "../buttons/GhostTwoLine.vue";
+import wysiwygEditor from "../blocks/wysiwygEditor.vue"
 
 export default defineComponent({
   components: {
     GhostTwoLineButton,
+    wysiwygEditor
   },
   setup() {
     return {
@@ -34,11 +33,20 @@ export default defineComponent({
       sectionTitle: "Making Disciples by the Water",
       sectionContent:
         "<p>Hendersonville Church of the Nazarene is located on a peninsula surrounded by Old Hickory Lake.  We believe that God has called us to provide living water to our community. That's why we exist. to make disciples by the water...This is where we craft our story. We want this paragraph to be a consistent story that we tell when we gather in person and online.</p>",
-      dynamicComponent: "GhostTwoLineButton",
-      twoLineButton: {
-        line1: "Join Us Live",
-        line2: "Next Live Gathering at 10:30a",
-      },
+      rightSideComponents: [
+        {
+          componentName: "wysiwygEditor",
+          componentContent: "<p>There is no <span class='italic'>US</span> without <span class='italic'>U</span></p>"
+        },
+        {
+          componentName: "GhostTwoLineButton",
+          componentContent: {
+            action: "Join Us Live",
+            description: "Next Live Gathering at 10:30a",
+            overlap: true
+          }
+        }
+      ]      
     };
   },
 });
@@ -49,6 +57,12 @@ export default defineComponent({
 .content_left {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.content {
+  color: $secondary;
+  line-height: 1.2;
+  letter-spacing: .2px;
+  padding-top: .5rem;
 }
 .accent {
   &:before {

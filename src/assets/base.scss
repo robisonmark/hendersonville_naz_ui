@@ -1,3 +1,4 @@
+// @import "normalize.css/normalize.css";
 @import "the-new-css-reset/css/reset.css";
 
 // @import "node_modules/@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/main.scss";
@@ -7,7 +8,7 @@
 @import "./scss/typography";
 
 html {
-  // font-size: 14px;
+  font-size: 16px;
 }
 
 body {

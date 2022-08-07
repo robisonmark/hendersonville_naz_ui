@@ -29,7 +29,7 @@ body {
 .w200, .extra_light { font-weight: 200; }
 .w300, .light { font-weight: 300; }
 .w400, .normal{ font-weight: 400; }
-.w500, .medium,  { font-weight: 500; }
+.w500, .medium { font-weight: 500; }
 .w600, .bold { font-weight: 600; }
 
 h1, .h1 {
@@ -79,8 +79,7 @@ h3, .h3 {
 
 	&.feature-title {
 		font-size: 3.6rem;
-		padding-bottom: 1.25rem;
-		line-height: 1;
+		line-height: .7; // currently using to balance the padding around child elements
 		font-weight: 300;
 	}
 } // = px / 16 (base rem size)
@@ -114,6 +113,8 @@ p {
 	font-size: 1.2rem;
 	font-family: $roboto;
 	// color: $secondary;
+	color: inherit;
 	font-weight: 300;
-	padding-top: .5rem;
+	line-height: inherit;
+	// padding-top: .5rem;
 }
