@@ -1,5 +1,5 @@
 <template>
-  <button class="button__ghost" :class="props?.modelValue?.overlap ? 'circle--overlap__centered' : null">
+  <button class="button__ghost">
     <div class="action">{{ props?.modelValue?.action }}</div>
     <div class="description">{{ props?.modelValue?.description }}</div>
   </button>
@@ -38,10 +38,5 @@ const props = defineProps({
       text-transform: lowercase;
     }
   }
-}
-
-.circle--overlap__centered {
-  position: absolute;
-  right: calc((45rem - 10rem) / (2 * 3.14));
 }
 </style>

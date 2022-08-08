@@ -19,11 +19,13 @@ import { defineComponent } from "vue";
 
 // components
 import GhostTwoLineButton from "../buttons/GhostTwoLine.vue";
+import SingleTaglineCta from "../blocks/SingleTaglineCta.vue"
 import wysiwygEditor from "../blocks/wysiwygEditor.vue"
 
 export default defineComponent({
   components: {
     GhostTwoLineButton,
+    SingleTaglineCta,
     wysiwygEditor
   },
   setup() {
@@ -35,18 +37,23 @@ export default defineComponent({
         "<p>Hendersonville Church of the Nazarene is located on a peninsula surrounded by Old Hickory Lake.  We believe that God has called us to provide living water to our community. That's why we exist. to make disciples by the water...This is where we craft our story. We want this paragraph to be a consistent story that we tell when we gather in person and online.</p>",
       rightSideComponents: [
         {
-          componentName: "wysiwygEditor",
-          componentContent: "<p>There is no <em class='italic'>US</em> without <em class='italic'>U</em></p>",
-          componentClass: "tagline__cta"
+          componentName: "SingleTaglineCta",
+          componentContent: [
+            {
+              componentName: 'WysiwygEditor',
+              componentContent: "<p>There is no <em class='italic'>US</em> without <em class='italic'>U</em></p>",
+              componentClass: "tagline__cta" 
+            },
+            {
+              componentName: "GhostTwoLineButton",
+              componentContent: {
+                action: "Join Us Live",
+                description: "Next Live Gathering at 10:30a",
+                overlap: true
+              }
+            }
+          ]
         },
-        {
-          componentName: "GßhostTwoLineButton",
-          componentContent: {
-            action: "Join Us Live",
-            description: "Next Live Gathering at 10:30a",
-            overlap: true
-          }
-        }
       ]      
     };
   },
