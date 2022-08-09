@@ -18,8 +18,11 @@
             <li
               class="top-level dropdown"
               :class="{ expand: openMenu.includes('about') }"
+              @click.stop.prevent="toggleMenu('about')"
+              @mouseenter="toggleMenu('about')"
+              @mouseleave="toggleMenu('about')"
             >
-              <span class="clickable" @click.stop.prevent="toggleMenu('about')">
+              <span class="clickable" >
                 Who We Are
                 <span class="material-icons-two-tone mobile">add</span>
                 <span class="material-icons-two-tone desktop">expand_more</span>
@@ -39,16 +42,18 @@
         </nav>
       </div>
       <div class="mobile flex-g-1">
-        <GoogleIcon icon="smartphone" fillName="primary-accent"></GoogleIcon>
+        <a href="tel: 6158244411">
+          <GoogleIcon icon="smartphone" fillName="primary-accent"></GoogleIcon>
+        </a>
       </div>
       <div class="flex-spacer"></div>
-      <div class="logo-container">
+      <a href="/" class="logo-container">
         <img
           alt="Hendersonville Church of the Nazarene Logo"
           class="logo"
           src="@/assets/images/HCNLogo.svg?url"
         />
-      </div>
+      </a>
     </div>
   </header>
 </template>
@@ -66,7 +71,7 @@ const openNav = ref(false);
 
 function toggleMenu(menuName: string) {
   const index = openMenu.value.indexOf(menuName);
-  console.log(openMenu.value);
+  console.log(index)
   if (index === -1) {
     openMenu.value = [...openMenu.value, menuName];
   } else {
@@ -260,6 +265,7 @@ header {
     }
 
     .dropdown {
+      cursor: pointer;
       .clickable {
         display: flex;
         flex-flow: row wrap;
@@ -277,7 +283,7 @@ header {
         display: none;
       }
 
-      &.open {
+      &.expand {
         position: relative;
         background-color: $secondary-accent;
         ul {
@@ -290,12 +296,16 @@ header {
           width: 100%;
         }
         li {
-          text-transform: none;
+          text-transform: uppercase;
           font-family: $roboto;
           font-size: 0.9rem;
+          font-weight: 300;
           padding: 1rem;
           display: flex;
           align-items: center;
+          &:hover {
+            background-color: $secondary;
+          }
         }
       }
     }
@@ -305,6 +315,12 @@ header {
 .connect {
   border: 2px solid $primary-accent;
   padding: 5px;
+
+  @media (max-width: 600px) {
+    margin: 1rem auto;
+    position: relative;
+    transform: translateX(-5%);
+  }
 }
 
 // Global Styles
@@ -342,12 +358,16 @@ header {
     display: inline-block;
   }
 }
+.mobile a {
+  display: flex;
+}
 
 @media (min-width: 600px) {
   .mobile {
     display: none;
   }
 }
+
 .flex-g-1 {
   flex-grow: 1;
 }

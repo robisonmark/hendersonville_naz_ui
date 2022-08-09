@@ -9,11 +9,11 @@
 import GhostTwoLine from "../buttons/GhostTwoLine.vue";
 
 // types 
-interface ComponentObject {
-    componentName: string;
-    componentContent: string;
-    componentClass?: string;
-            
+type ComponentObject = {
+  key: keyof ComponentObject;
+  componentName: string;
+  componentContent: string;
+  componentClass?: string;     
 }
 
 const props = defineProps({
@@ -22,10 +22,10 @@ const props = defineProps({
 });
 
 const components = props.modelValue?.reduce((acc: ComponentObject, curr: ComponentObject) => {
-    const mv: ComponentObject = {...acc};
-    mv[curr['componentName']] = curr
+  const mv = {...acc};
+  mv[curr['componentName']] = curr
 
-    return mv;
+  return mv;
 }, {})
 </script>
 
@@ -33,5 +33,12 @@ const components = props.modelValue?.reduce((acc: ComponentObject, curr: Compone
 .circle--overlap__centered {
   position: absolute;
   right: calc((45rem - 10rem) / (2 * 3.14));
+}
+// xl size
+@media screen and (min-width: 1600px) {
+  .circle--overlap__centered {
+    position: absolute;
+    right: calc((48rem - 10rem) / (2 * 3.14));
+  }
 }
 </style>
