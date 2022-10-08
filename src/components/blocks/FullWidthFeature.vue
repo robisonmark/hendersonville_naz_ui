@@ -7,7 +7,7 @@
             <img class="feature-image" :src="featureImage" />
           </div>
         </div>
-        <div class="col content">
+        <div class="col-5 content">
           <h3 class="feature-title">{{ featureBlockTitle }}</h3>
           <div class="feature-content" v-html="featureBlockContent"></div>
           <ghost-two-line-button

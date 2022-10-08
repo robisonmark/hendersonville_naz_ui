@@ -86,7 +86,7 @@ export default defineComponent({
     border-radius: 7px;
     font-family: $montserrat;
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     background-color: $primary;
     color: $primary-accent;
@@ -95,8 +95,8 @@ export default defineComponent({
     grid-column-start: 1;
     grid-column-end: 4;
     margin: 1rem auto;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     &:hover {
       mix-blend-mode: darken;
     }
