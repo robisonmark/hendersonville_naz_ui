@@ -23,6 +23,10 @@ $breakpoints: (
   &-flex {
       display: flex;
   }
+
+  &__noHero {
+    padding-top: 4rem;
+  }
 }
 
 .row {
