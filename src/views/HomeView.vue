@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import FullHero from "../components/heros/FullWidthHero.vue";
 import ContentLeft from "../components/blocks/ContentLeft.vue";
-import FullWidthFeature from "@/components/blocks/FullWidthFeature.vue";
+import FullWidthFeature from "@/components/blocks/fullWidthFeature/FullWidthFeature.vue";
 import CardRow from "@/components/blocks/CardRow.vue";
 
 const cards = [
