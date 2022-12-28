@@ -6,12 +6,15 @@
           <div class="social">
             <h3>Follow Us <span class="accent">On Social</span></h3>
             <div class="social-links">
-              <a href="https://www.facebook.com/HendersonvilleNaz"
+              <FacebookIcon></FacebookIcon>
+              <InstagramIcon></InstagramIcon>
+              <YoutubeIcon></YoutubeIcon>
+              <!-- <a href="https://www.facebook.com/HendersonvilleNaz"
                 ><img src="" alt="Facebook"
               /></a>
               <a href="https://www.instagram.com/hendersonvillenaz/"
                 ><img src="" alt="Instagram"
-              /></a>
+              /></a> -->
             </div>
           </div>
           <div class="location">
@@ -72,10 +75,18 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import FacebookIcon from "@/components/icons/FacebookIconLink.vue";
+import InstagramIcon from "@/components/icons/InstagramIconLink.vue";
+import YoutubeIcon from "@/components/icons/YouTubeIconLink.vue";
 
 export default defineComponent({
   setup() {
     return {};
+  },
+  components: {
+    FacebookIcon,
+    InstagramIcon,
+    YoutubeIcon,
   },
 });
 </script>
@@ -100,10 +111,15 @@ footer {
     .accent {
       font-family: $roboto;
       font-weight: 600;
-      &:before {
-        content: attr(data-text);
-        white-space: pre;
-      }
+      display: block;
+      text-transform: lowercase;
+      line-height: .7;
+      padding-bottom: 0.5rem;
+      // this may  be what is needed once getting text back
+      // &:before {
+      //   content: attr(data-text);
+      //   white-space: pre;
+      // }
     }
   }
 
@@ -113,6 +129,20 @@ footer {
 
   nav {
     text-align: right;
+  }
+}
+
+.social-links {
+  display: inline-flex;
+  & > a {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    &:not(:first-child) {
+      padding-left: .5rem;
+    }
+    &:not(:last-child) {
+      padding-right: .5rem;
+    }
   }
 }
 
@@ -136,5 +166,12 @@ footer {
   mix-blend-mode: overlay;
   // display: block;
   margin: auto;
+}
+:root {
+  --curve_length: {calc(100vw * 1.8416)}
+}
+.curve {
+  width: var(--curve_length);
+
 }
 </style>

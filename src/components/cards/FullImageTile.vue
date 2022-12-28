@@ -25,25 +25,25 @@ export default defineComponent({
 <style scoped lang="scss">
 @import "../../assets/scss/variables";
 .full-image {
-  height: 400px;
+  height: 350px;
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: content-box;
-  border-radius: 15px;
+  border-radius: 8px;
   overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
 
   &_container {
-    height: 400px;
+    height: 350px;
   }
 
   &:before {
     content: "";
     position: absolute;
     background-color: $church-primary;
-    border-radius: 15px;
+    border-radius: 8px;
     height: 100%;
     width: 100%;
     mix-blend-mode: darken;
