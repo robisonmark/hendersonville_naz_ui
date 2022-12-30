@@ -4,12 +4,13 @@ html {
     // Setting dynamic REM size
 	$min-fs : 14px; // Minimum Font Size
 	$max-fs : 16px; // Maximum Font Size
-	$min-vw : 600px; // Minimum Window width
-	$max-vw : 1240px; // Maximum Window width
+	$min-vw : 400px; // Minimum Window width
+	$max-vw : 1380px; // Maximum Window width
     // font sizing
 	// font-size: calc( (100vw - $min-vw) / (unit($max-vw) - unit($min-vw)") * ("unit($max-fs) - unit($min-fs)") +" $min-fs);
   	@media (max-width: $min-vw) { font-size: $min-fs; }
-  	@media (min-width: $max-vw) { font-size: $max-fs; }
+  	@media (min-width: $min-vw) { font-size: $max-fs; }
+	// font-size: calc( (100vmin - $min-vw) / ;
 }
 
 body {
@@ -63,7 +64,7 @@ h2, .h2 {
 	font-style: italic;
 	font-weight: 300;
 	@media (max-width: 600px) {
-		font-size: 1.45rem;
+		font-size: 1.35rem;
 	}
 } // = 36px / 16 (base rem size)
 
