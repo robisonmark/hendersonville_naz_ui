@@ -55,16 +55,17 @@ export default defineComponent({
   max-height: calc(100vw * 1.5);
   .container {
     position: relative;
+    height: inherit;
   }
   .content-container__circle {
     max-width: $content-max-width;
     height: 100vh;
     max-height: calc(100vw * 1.09);
     position: absolute;
-    top: calc((100vw * 1.5) - (100vw * 1.09) + 4rem);
+    bottom: clamp(-4rem, -16%, -10rem);
+    right: clamp(-8rem, -15vw, -25rem);
     @media (min-width: 600px) {
       top: 4vh;
-      right: -20vw;
     }
   }
 
@@ -72,7 +73,6 @@ export default defineComponent({
     max-height: calc(100vw * 1.7778);
     .content-container__circle {
       max-height: calc(100vw * 1.7778);
-      right: -12vw;
     }
   }
 }
@@ -80,8 +80,8 @@ export default defineComponent({
 .hero_content {
   z-index: 1;
   text-align: right;
-  position: relative;
-  top: 35vh;
+  position: absolute;
+  bottom: clamp(4rem, 13%, 10rem);
   right: 1rem;
 }
 
