@@ -3,7 +3,7 @@
     <div class="container">
       <FullWidthHeroHeadlineCircle class="content-container__circle">
       </FullWidthHeroHeadlineCircle>
-      <!-- <div class="content-container__circle"> -->
+      <!-- See about moving below into svg circle -->
       <div class="hero_content">
         <h1>
           {{ headline }}
@@ -16,7 +16,6 @@
           <h3 class="lower thin">{{ information }}</h3>
         </div>
       </div>
-      <!--</div> -->
     </div>
   </div>
 </template>
@@ -62,14 +61,19 @@ export default defineComponent({
     height: 100vh;
     max-height: calc(100vw * 1.09);
     position: absolute;
-    bottom: clamp(-4rem, -16%, -10rem);
-    right: clamp(-8rem, -15vw, -25rem);
-    @media (min-width: 600px) {
-      top: 4vh;
+    top: 4vh;
+    bottom: clamp(-10rem, -17vh, -4rem);
+    right: clamp(-25rem, -15vw, -8rem);
+  }
+
+  @media (min-width: 1080px) and (orientation: landscape) {
+    max-height: calc(100vw * 0.7778);
+    .content-container__circle {
+      max-height: calc(100vw * 0.7778);
     }
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 1080px) and (orientation: portrait) {
     max-height: calc(100vw * 1.7778);
     .content-container__circle {
       max-height: calc(100vw * 1.7778);

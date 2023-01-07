@@ -5,9 +5,10 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="feature-image_clip">
+            <!-- <div class="feature-image_clip">
               <img class="feature-image" :src="featureImage" />
-            </div>
+            </div> -->
+            <FullWidthFeatureImageCircle></FullWidthFeatureImageCircle>
           </div>
           <div class="col-5 content">
             <h3 class="feature-title">{{ featureBlockTitle }}</h3>
@@ -30,12 +31,14 @@ import { defineComponent } from "vue";
 // components
 import FullWidthFeatureContainerTop from "./FullWidthFeatureContainerTop.vue";
 import FullWidthFeatureContainerBottom from "./FullWidthFeatureContainerBottom.vue";
+import FullWidthFeatureImageCircle from "./FullWidthFeatureImageCircle.vue";
 import GhostTwoLineButton from "../../buttons/GhostTwoLine.vue";
 
 export default defineComponent({
   components: {
     FullWidthFeatureContainerTop,
     FullWidthFeatureContainerBottom,
+    FullWidthFeatureImageCircle,
     GhostTwoLineButton,
   },
   setup() {
@@ -104,8 +107,8 @@ export default defineComponent({
     flex-flow: column;
     justify-content: center;
     align-items: flex-start;
-    height: inherit;
-    height: 550px;
+    height: 56vh;
+    // height: clamp(35vh, calc(50vw - 16vh), 50vh);
   }
   .feature-content {
     color: $primary-accent;
@@ -113,16 +116,6 @@ export default defineComponent({
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     line-height: 1.2;
-  }
-
-  .feature-image_clip {
-    position: absolute;
-    top: -3rem;
-    left: -5rem;
-    img {
-      clip-path: ellipse(50% 50% at 50% 50%);
-      max-height: 630px;
-    }
   }
 }
 </style>
