@@ -2,9 +2,10 @@
   <svg
     viewBox="0 0 1080 982"
     version="1.1"
-    id="svg17779"
+    id="heroCircle"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:svg="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMax meet"
   >
     <defs id="defs17783" />
     <ellipse
@@ -30,4 +31,10 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+@import "../../assets/scss/variables";
+
+#heroCircle {
+  max-width: calc($content-max-width * 0.7);
+}
+</style>

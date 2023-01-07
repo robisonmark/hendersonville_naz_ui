@@ -1,14 +1,15 @@
 <template>
   <div class="feature--container__oval">
     <FullWidthFeatureContainerTop></FullWidthFeatureContainerTop>
+    <!-- <FullWidthFeatureImageCircle></FullWidthFeatureImageCircle> -->
     <div class="backer">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col feature--image">
+            <FullWidthFeatureImageCircle></FullWidthFeatureImageCircle>
             <!-- <div class="feature-image_clip">
               <img class="feature-image" :src="featureImage" />
             </div> -->
-            <FullWidthFeatureImageCircle></FullWidthFeatureImageCircle>
           </div>
           <div class="col-5 content">
             <h3 class="feature-title">{{ featureBlockTitle }}</h3>
@@ -66,10 +67,24 @@ export default defineComponent({
   width: 100%;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  position: relative;
 
   .backer {
     background-color: $secondary-accent;
+  }
+
+  .container {
     position: relative;
+
+    @media (orientation: portrait) {
+      .row {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .feature--image {
+    order: 1;
   }
 
   // &:before {
@@ -107,7 +122,9 @@ export default defineComponent({
     flex-flow: column;
     justify-content: center;
     align-items: flex-start;
-    height: 56vh;
+    order: 2;
+    // height: 56vh;
+    height: 49vh;
     // height: clamp(35vh, calc(50vw - 16vh), 50vh);
   }
   .feature-content {

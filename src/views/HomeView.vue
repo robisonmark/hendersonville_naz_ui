@@ -6,13 +6,16 @@ import CardRow from "@/components/blocks/CardRow.vue";
 
 const cards = [
   {
-    name: "CircleImageTile",
+    name: "CircleImageColumn",
   },
   {
-    name: "CircleImageTile",
+    name: "CircleImageColumn",
   },
   {
-    name: "CircleImageTile",
+    name: "CircleImageColumn",
+  },
+  {
+    name: "CircleImageColumn",
   },
 ];
 
@@ -33,7 +36,9 @@ const tiles = [
   <full-hero></full-hero>
   <content-left></content-left>
   <full-width-feature></full-width-feature>
-  <content-left></content-left>
-  <card-row :cards="cards"></card-row>
-  <card-row :cards="tiles"></card-row>
+  <div class="container">
+    <h4>Staff</h4>
+    <card-row :cards="cards"></card-row>
+  </div>
+  <!-- <card-row :cards="tiles"></card-row> -->
 </template>

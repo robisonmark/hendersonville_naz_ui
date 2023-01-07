@@ -6,6 +6,7 @@
     xml:space="preserve"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:svg="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMin meet"
   >
     <defs id="defs2">
       <clipPath id="a">
@@ -70,15 +71,34 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@import "../../../assets/scss/variables";
 #feature-image_clip {
   position: absolute;
-  left: -5rem;
-  max-width: calc(50vw + 8vh);
-  top: calc(-3rem + -6vh);
-  height: calc(50vw + 8vh);
+  left: -8vw;
+  max-width: calc($content-max-width + 8vw);
+  top: -4vh;
+  // height: calc(50vw + 8vh);
+  // height: 79vh;
+  height: 70vh;
   img {
     clip-path: ellipse(50% 50% at 50% 50%);
     max-height: 630px;
   }
+
+  @media (orientation: portrait) {
+    position: relative;
+    left: unset;
+    margin: auto;
+    width: 70%;
+    height: clamp(269px, 70vh, 861px);
+  }
 }
+
+// position: absolute;
+//     left: -8vh;
+//     max-width: calc(50vw + 8vh);
+//     top: 0;
+//     height: calc(50vw + 8vh);
+//     width: auto;
+// }
 </style>

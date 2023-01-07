@@ -11,6 +11,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
+import CircleImageColumn from "../cards/CircleImage/CircleImageColumn.vue";
 import CircleImageTile from "../cards/CircleImageTile.vue";
 import FullImageTile from "../cards/FullImageTile.vue";
 import EventCardLarge from "../cards/EventCardLarge.vue";
@@ -20,6 +21,7 @@ import EventCardSmall from "../cards/EventCardSmall.vue";
 
 export default defineComponent({
   components: {
+    CircleImageColumn,
     CircleImageTile,
     FullImageTile,
     EventCardLarge,

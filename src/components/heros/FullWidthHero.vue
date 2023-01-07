@@ -58,12 +58,11 @@ export default defineComponent({
   }
   .content-container__circle {
     max-width: $content-max-width;
-    height: 100vh;
+    height: 100%;
     max-height: calc(100vw * 1.09);
     position: absolute;
-    top: 4vh;
     bottom: clamp(-10rem, -17vh, -4rem);
-    right: clamp(-25rem, -15vw, -8rem);
+    right: clamp(-18rem, -15vw, -8rem);
   }
 
   @media (min-width: 1080px) and (orientation: landscape) {
