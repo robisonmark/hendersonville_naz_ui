@@ -22,7 +22,7 @@ const props = defineProps({
 });
 
 const components = props.modelValue?.reduce((acc: ComponentObject, curr: ComponentObject) => {
-  const mv = {...acc};
+  const mv: {[index:string]:any} = {...acc};
   mv[curr['componentName']] = curr
 
   return mv;
