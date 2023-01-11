@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col left_col">
             <div class="social">
-              <h3>Follow Us <span class="accent">On Social</span></h3>
+              <h3>Follow Us <span class="accent long">On Social</span></h3>
               <div class="social-links">
                 <a href="https://www.facebook.com/HendersonvilleNaz"
                   ><img src="" alt="Facebook"
@@ -93,11 +93,11 @@ export default defineComponent({
 @import "../../assets/scss/variables";
 
 footer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  
   .footer__background {
     background-color: $church-primary;
     position: relative;
+    padding-bottom: 2rem;
   }
   & > :not(h3) {
     color: $church-secondary;
@@ -109,11 +109,16 @@ footer {
   h3 {
     font-weight: 300;
     line-height: 1;
+    padding-bottom: 1rem;
     .accent {
       font-family: $roboto;
       font-weight: 600;
+    }
+
+    .long{
+      text-transform: lowercase;
       &:before {
-        content: attr(data-text);
+        content: '\a';
         white-space: pre;
       }
     }

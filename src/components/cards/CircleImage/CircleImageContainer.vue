@@ -55,4 +55,5 @@ export default defineComponent({
 svg {
   clip-path: url("#circle");
 }
+
 </style>

@@ -76,7 +76,8 @@ export default defineComponent({
   position: absolute;
   left: -8vw;
   max-width: calc($content-max-width + 8vw);
-  top: -4vh;
+  // top: -4vh;
+  top: clamp(-8rem, -10vh, -2rem);
   // height: calc(50vw + 8vh);
   // height: 79vh;
   height: 70vh;

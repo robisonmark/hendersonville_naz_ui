@@ -47,5 +47,6 @@ export default defineComponent({
   position: relative;
   margin-block-start: -3px;
   z-index: -1;
+  filter: drop-shadow(3px 4px 2px rgb(27 54 74 / 0.29));
 }
 </style>

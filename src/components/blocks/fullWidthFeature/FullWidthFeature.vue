@@ -124,7 +124,7 @@ export default defineComponent({
     align-items: flex-start;
     order: 2;
     // height: 56vh;
-    height: 49vh;
+    height: clamp(350px, 49vh, 500px);
     // height: clamp(35vh, calc(50vw - 16vh), 50vh);
   }
   .feature-content {

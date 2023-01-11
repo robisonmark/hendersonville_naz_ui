@@ -56,13 +56,15 @@ export default defineComponent({
     position: relative;
     height: inherit;
   }
+
+  // this should move to the circle component itself
   .content-container__circle {
     max-width: $content-max-width;
     height: 100%;
     max-height: calc(100vw * 1.09);
     position: absolute;
     bottom: clamp(-10rem, -17vh, -4rem);
-    right: clamp(-18rem, -15vw, -8rem);
+    right: clamp(-13rem, -15vw, -8rem);
   }
 
   @media (min-width: 1080px) and (orientation: landscape) {

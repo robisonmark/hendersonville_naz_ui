@@ -15,6 +15,7 @@
         <nav id="nav-header" :class="{ open: openNav }">
           <ul>
             <li class="top-level"><RouterLink to="/">Home</RouterLink></li>
+            <li class="top-level"><a href="https://thecove.breezechms.com/" target="_blank">The Cove</a></li>
             <li
               class="top-level dropdown"
               :class="{ expand: openMenu.includes('about') }"
