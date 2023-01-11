@@ -59,11 +59,17 @@ calcs for circle */
     <section>
       <h5>Web Elements</h5>
       <div class="container">
-        <div>hero image should have a minimum aspect ratio of 2:3</div>
+        <div>hero image should have a minimum aspect ratio of 3:4</div>
         <full-hero></full-hero>
         <!-- <content-left></content-left>
         <full-width-feature></full-width-feature>
         <content-left></content-left> -->
+
+        <h4>Tile with Circle Image</h4>
+        <div>
+          Cicle Image should be an aspect ratio of 4:3 with minimum height of
+          339px and width of 452px
+        </div>
       </div>
     </section>
   </div>
