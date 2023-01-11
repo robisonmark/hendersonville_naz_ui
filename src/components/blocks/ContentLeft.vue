@@ -8,7 +8,13 @@
         </div>
       </div>
       <div class="col col-sm-6">
-        <component v-for="(block, index) in rightSideComponents" :key="index" :is="block.componentName" v-model="block.componentContent" :componentClass="block.componentClass"></component>
+        <component
+          v-for="(block, index) in rightSideComponents"
+          :key="index"
+          :is="block.componentName"
+          v-model="block.componentContent"
+          :componentClass="block.componentClass"
+        ></component>
       </div>
     </div>
   </div>
@@ -19,14 +25,14 @@ import { defineComponent } from "vue";
 
 // components
 import GhostTwoLineButton from "../buttons/GhostTwoLine.vue";
-import SingleTaglineCta from "../blocks/SingleTaglineCta.vue"
-import wysiwygEditor from "../blocks/wysiwygEditor.vue"
+import SingleTaglineCta from "../blocks/SingleTaglineCta.vue";
+import wysiwygEditor from "../blocks/wysiwygEditor.vue";
 
 export default defineComponent({
   components: {
     GhostTwoLineButton,
     SingleTaglineCta,
-    wysiwygEditor
+    wysiwygEditor,
   },
   setup() {
     return {
@@ -40,21 +46,22 @@ export default defineComponent({
           componentName: "SingleTaglineCta",
           componentContent: [
             {
-              componentName: 'WysiwygEditor',
-              componentContent: "<p>There is no <em class='italic'>US</em> without <em class='italic'>U</em></p>",
-              componentClass: "tagline__cta" 
+              componentName: "WysiwygEditor",
+              componentContent:
+                "<p>There is no <em class='italic'>US</em> without <em class='italic'>U</em></p>",
+              componentClass: "tagline__cta",
             },
             {
               componentName: "GhostTwoLineButton",
               componentContent: {
                 action: "Join Us Live",
                 description: "Next Live Gathering at 10:30a",
-                overlap: true
-              }
-            }
-          ]
+                overlap: true,
+              },
+            },
+          ],
         },
-      ]      
+      ],
     };
   },
 });
@@ -69,8 +76,8 @@ export default defineComponent({
 .content {
   color: $secondary;
   line-height: 1.2;
-  letter-spacing: .2px;
-  padding-top: .5rem;
+  letter-spacing: 0.2px;
+  padding-top: 0.5rem;
 }
 .accent {
   &:before {

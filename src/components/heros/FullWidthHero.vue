@@ -1,18 +1,19 @@
 <template>
   <div class="hero_full" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
     <div class="container">
-      <div class="content-container__circle">
-        <div class="hero_content">
-          <h1>
-            {{ headline }}
-            <span class="headline_break">{{ headlineSecondLine }}</span>
-          </h1>
-          <div class="pt-2">
-            <h2 v-for="(line, i) in tagline" :key="i" class="tagline">
-              {{ line }}
-            </h2>
-            <h3 class="lower thin">{{ information }}</h3>
-          </div>
+      <FullWidthHeroHeadlineCircle class="content-container__circle">
+      </FullWidthHeroHeadlineCircle>
+      <!-- See about moving below into svg circle -->
+      <div class="hero_content">
+        <h1>
+          {{ headline }}
+          <span class="headline_break">{{ headlineSecondLine }}</span>
+        </h1>
+        <div class="pt-2">
+          <h2 v-for="(line, i) in tagline" :key="i" class="tagline">
+            {{ line }}
+          </h2>
+          <h3 class="lower thin">{{ information }}</h3>
         </div>
       </div>
     </div>
@@ -21,6 +22,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
+// components
+import FullWidthHeroHeadlineCircle from "./FullWidthHeroHeadlineCircle.vue";
 
 export default defineComponent({
   setup() {
@@ -31,6 +35,10 @@ export default defineComponent({
       tagline: ["To Seek", "To Serve", "To Share"], // define rules and use polymorphism to break or keep together(?) or always send as list
       information: "Sunday School 9:30a | Worship Gathering 10:30a", // needs note in admin saying the style of this will be all lower case
     };
+  },
+
+  components: {
+    FullWidthHeroHeadlineCircle,
   },
 });
 </script>
@@ -43,17 +51,31 @@ export default defineComponent({
   position: relative;
   width: 100%;
   height: 80vh;
+  max-height: calc(100vw * 1.5);
+  .container {
+    position: relative;
+    height: inherit;
+  }
   .content-container__circle {
     max-width: $content-max-width;
-    height: 82vh;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    position: relative;
-    &:after {
-      position: absolute;
-      right: -10rem;
-      bottom: -8rem;
+    height: 100%;
+    max-height: calc(100vw * 1.09);
+    position: absolute;
+    bottom: clamp(-10rem, -17vh, -4rem);
+    right: clamp(-18rem, -15vw, -8rem);
+  }
+
+  @media (min-width: 1080px) and (orientation: landscape) {
+    max-height: calc(100vw * 0.7778);
+    .content-container__circle {
+      max-height: calc(100vw * 0.7778);
+    }
+  }
+
+  @media (min-width: 1080px) and (orientation: portrait) {
+    max-height: calc(100vw * 1.7778);
+    .content-container__circle {
+      max-height: calc(100vw * 1.7778);
     }
   }
 }
@@ -61,10 +83,9 @@ export default defineComponent({
 .hero_content {
   z-index: 1;
   text-align: right;
-  text-align: right;
-  margin-top: 4rem;
   position: absolute;
-  top: 50%;
+  bottom: clamp(4rem, 13%, 10rem);
+  right: 1rem;
 }
 
 h1 {
@@ -72,20 +93,5 @@ h1 {
   flex-flow: column;
   text-align: right;
   z-index: 1;
-}
-// Probably Global
-// Remember Circle can extend out of view box but content should never move past edge of top nav
-.content-container__circle:after {
-  content: "";
-  height: 42rem;
-  width: 45rem;
-  border-radius: 50%;
-  background-color: $secondary-accent;
-  mix-blend-mode: multiply;
-
-  @media (min-width: 1600px) {
-    height: 45rem;
-    width: 48rem;
-  }
 }
 </style>
