@@ -4,11 +4,20 @@
       class="circle-image"
       :style="{ backgroundImage: 'url(' + heroImage + ')' }"
     ></div>
+    <header class="page-title">
+      <h1>{{heroTitle}}
+        <span class="headline_break">{{heroSubtitle}}</span>
+      </h1>
+      <h2 class="pt-2">{{heroTag}}</h2>
+    </header>
   </div>
 </template>
 
 <script setup lang="ts">
 const heroImage = "/Hero_Image_Placeholder.jpg";
+const heroTitle = "Calendar";
+const heroSubtitle = "Church Life"
+const heroTag = "Building Relationships by Sharing Life"
 
 defineExpose({
   heroImage,
@@ -18,11 +27,20 @@ defineExpose({
 <style scoped lang="scss">
 @import "../../assets/scss/variables";
 
+$circle-width: 43rem;
+
+.page-title {
+  position: absolute;
+  text-align: right;
+  z-index: 1;
+  top: 15rem;
+  right: 7rem;
+}
 .circle-container {
   // max-width: $content-max-width;
-  width: 38rem;
+  width: $circle-width;
   height: calc(
-    38rem * 0.963
+    $circle-width * 0.963
   ); // set with ems .87 (.963 in secondary pages) is the difference in design
   display: flex;
   justify-content: end;
@@ -43,10 +61,10 @@ defineExpose({
   &:after {
     content: "";
     height: calc(
-      38rem * 0.963
+      $circle-width * 0.963
     ); // set with ems .87 (.963 in secondary pages) is the difference in design
 
-    width: 38rem;
+    width: $circle-width;
     // border-radius: 50%;
     clip-path: ellipse(48% 50% at 50% 50%);
     background-color: $secondary-accent;
@@ -67,10 +85,10 @@ defineExpose({
     background-size: 35px;
     clip-path: ellipse(48% 50% at 50% 50%);
     height: calc(
-      38rem * 0.963
+      $circle-width * 0.963
     ); // set with ems .87 (.963 in secondary pages) is the difference in design
 
-    width: 38rem;
+    width: $circle-width;
     position: absolute;
     top: 2rem;
     left: 1rem;
@@ -86,7 +104,7 @@ defineExpose({
 
   // &:after {
   //   content: "";
-  //   height: calc(38rem * 0.87);
+  //   height: calc($circle-width * 0.87);
   //   width: 38rem;
   //   border-radius: 50%;
   //   background-color: $secondary-accent;

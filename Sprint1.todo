@@ -2,15 +2,15 @@ To Use Requires TODO Highlight and Todo+ extensions
 boxs made with ctrl + enter
 check made with alt + d
 Components For Home Page
-☐ Header
-☐ Footer
-☐ Feature Block
-☐ Hero (main)
-☐ Hero Feature
-☐ CTA Primary
-☐ Event Card (tile) (side_circle)
-☐ Ministry Card (tile) ()
-☐ Content Block
+✔ Header Structure @done(22-08-08 23:03)
+✔ Footer Structure @done(22-08-08 23:04)
+✔ Feature Block @done(22-08-08 23:04)
+✔ Hero (main) @done(22-08-08 23:04)
+✔ Hero Feature @done(22-08-08 23:04)
+✔ CTA Primary @done(22-08-08 23:04)
+✔ Event Card (tile) (side_circle) @done(22-08-08 23:04)
+✔ Ministry Card (tile) () @done(22-08-08 23:04)
+✔ Content Block @done(22-08-08 23:04)
 
 Components For Contact Page
 
@@ -25,29 +25,29 @@ Global Styles
 ☐ Research on CSS Variables
 ✔ Research PostCSS @done(22-05-17 22:50)
 ☐ Autoprefixer (?)
-☐ Remove Full Bootstrap
+✔ Remove Full Bootstrap @done(22-08-08 23:04)
 ✔ Research modern grid @done(22-05-17 22:50)
-☐ Global Variables import
+✔ Global Variables import @done(22-08-08 23:04)
 
 Route for Home Page
 ☐ 404
 ☐ 500
 
 Custom Post Types - API Side
-☐ Ministries
+☐ Ministries 
 ☐ Staff
 
 Concerns to work out
 ☐ Hosting
-☐ Domain (who owns to point to hosting)
+✔ Domain (who owns to point to hosting) @done(22-08-08 23:05)
 ☐ Nucules Drop down (engagment)
 ☐ Environmental Variables
 ☐ Contact Us Protocols
 ☐ Social Links
-☐ Phone Number
-☐ Office Email
+✔ Phone Number @done(22-08-08 23:05)
+✔ Office Email @done(22-08-08 23:12)
 ☐ Dark Mode
 ☐ Google Analytics - env = prod
-☐ Server Side rendering for dynamic pages?
-☐ Address - set once? component?
+✘ Server Side rendering for dynamic pages? @cancelled(22-08-08 23:04)
+✔ Address - set once? component? @done(22-08-08 23:06)
 ☐ Google Maps -> Business Link

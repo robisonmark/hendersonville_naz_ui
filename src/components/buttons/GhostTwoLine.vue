@@ -1,14 +1,42 @@
 <template>
-  <div class="button__ghost">
-    <div class="action">{{ content.action }}</div>
-    <div class="description">{{ content.description }}</div>
-  </div>
+  <button class="button__ghost">
+    <div class="action">{{ props?.modelValue?.action }}</div>
+    <div class="description">{{ props?.modelValue?.description }}</div>
+  </button>
 </template>
 
 <script setup lang="ts">
-const content = defineProps(["modelView", "content"]);
-
-console.log(content);
+const props = defineProps({
+  modelValue: Object,
+});
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "../../assets/scss/variables";
+.button {
+  &__ghost{
+    border: 2px solid $primary-accent;
+    border-radius: 7px;
+    color: $primary-accent;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    min-width: 250px;
+
+    .action {
+      font-family: $montserrat;
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+
+    .description {
+      font-family: $roboto;
+      font-weight: 300;
+      font-size: .9rem;
+      text-transform: lowercase;
+    }
+  }
+}
+</style>

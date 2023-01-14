@@ -1,0 +1,37 @@
+☐ Refine header toogle dropdowns hover and click
+☐ Add dome to Footer
+☐ Square Image styles mobile and desktop
+☐ Refine Hero (main) styles to match mock
+☐ Secondary Page Structure
+☐ Global Circle
+☐ Use defined breakpoints
+☐ Social Media Icons
+☐ Social Media Links
+☐ https://purgecss.com/
+
+Components For Contact Page
+
+
+Global Styles
+☐ body
+☐ font
+☐ helpers
+☐ Research on CSS Variables
+☐ Autoprefixer (?)
+
+Route for Home Page
+☐ 404
+☐ 500
+
+Custom Post Types - API Side
+☐ Ministries 
+☐ Staff
+
+Concerns to work out
+☐ Hosting
+☐ Nucules Drop down (engagment)
+☐ Environmental Variables
+☐ Contact Us Protocols
+☐ Dark Mode
+☐ Google Analytics - env = prod
+☐ Google Maps -> Business Link

@@ -5,7 +5,7 @@ import ContentCircle from "@/components/elements/contentCircle.vue";
 </script>
 
 <template>
-  <div class="container">
+  <div class="container container__noHero">
     <h4>Events</h4>
     <div class="row">
       <div class="col-auto col-sm-6">
@@ -33,8 +33,4 @@ import ContentCircle from "@/components/elements/contentCircle.vue";
 
 <script setup lang="ts"></script>
 
-<style lang="scss" scoped>
-.container {
-  padding-top: 4rem;
-}
-</style>
+<style lang="scss" scoped></style>

@@ -1,3 +1,4 @@
+// @import "normalize.css/normalize.css";
 @import "the-new-css-reset/css/reset.css";
 
 // @import "node_modules/@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/main.scss";
@@ -6,14 +7,16 @@
 @import "./scss/layout";
 @import "./scss/typography";
 
-html {
-  // font-size: 14px;
-}
 
 body {
   background-color: $background;
   overflow-x: hidden;
   min-height: 100vh;
+
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: inherit;
+  font-weight: 300;
 }
 
 main {
@@ -21,4 +24,9 @@ main {
   @media (min-width: 600px) {
     margin-top: 70px;
   }
+}
+
+// port to helpers
+.full-height {
+  height: 85vh;
 }

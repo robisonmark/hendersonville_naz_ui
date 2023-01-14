@@ -1,15 +1,66 @@
+@use "sass:math";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*
+https://css-tricks.com/viewport-sized-typography/
 
+body {
+  font-size: calc(0.75em + 1vmin);
+}
+
+https://sass-lang.com/documentation/values/calculations#min-and-max
+
+and 
+
+Pure-CSS solution with calc(), CSS units and math
+This is precisely not what OP asks, but may make someone's day. This answer is not spoon-feedingly easy and needs some researching on the developer end.
+
+I came finally to get a pure-CSS solution for this using calc() with different units. You will need some basic mathematical understanding of formulas to work out your expression for calc().
+
+When I worked this out, I had to get a full-page-width responsive header with some padding few parents up in DOM. I'll use my values here, replace them with your own.
+
+To mathematics
+You will need:
+
+Nicely adjusted ratio in some viewport. I used 320 pixels, thus I got 24 pixels high and 224 pixels wide, so the ratio is 9.333... or 28 / 3
+The container width, I had padding: 3em and full width so this got to 100wv - 2 * 3em
+X is the width of container, so replace it with your own expression or adjust the value to get full-page text. R is the ratio you will have. You can get it by adjusting the values in some viewport, inspecting element width and height and replacing them with your own values. Also, it is width / heigth ;)
+
+x = 100vw - 2 * 3em = 100vw - 6em
+r = 224px/24px = 9.333... = 28 / 3
+
+y = x / r
+  = (100vw - 6em) / (28 / 3)
+  = (100vw - 6em) * 3 / 28
+  = (300vw - 18em) / 28
+  = (75vw - 4.5rem) / 7
+And bang! It worked! I wrote
+
+font-size: calc((75vw - 4.5rem) / 7)
+to my header and it adjusted nicely in every viewport.
+
+But how does it work?
+We need some constants up here. 100vw means the full width of viewport, and my goal was to establish full-width header with some padding.
+
+The ratio. Getting a width and height in one viewport got me a ratio to play with, and with ratio I know what the height should be in other viewport width. Calculating them with hand would take plenty of time and at least take lots of bandwidth, so it's not a good answer.
+
+Conclusion
+I wonder why no-one has figured this out and some people are even telling that this would be impossible to tinker with CSS. I don't like to use JavaScript in adjusting elements, so I don't accept JavaScript (and forget about jQuery) answers without digging more. All in all, it's good that this got figured out and this is one step to pure-CSS implementations in website design.
+
+I apologize of any unusual convention in my text, I'm not native speaker in English and am also quite new to writing Stack Overflow answers.
+
+It should also be noted that we have evil scrollbars in some browsers. For example, when using Firefox I noticed that 100vw means the full width of viewport, extending under scrollbar (where content cannot expand!), so the fullwidth text has to be margined carefully and preferably get tested with many browsers and devices.
+*/
 html {
     // Setting dynamic REM size
 	$min-fs : 14px; // Minimum Font Size
 	$max-fs : 16px; // Maximum Font Size
-	$min-vw : 600px; // Minimum Window width
-	$max-vw : 1240px; // Maximum Window width
+	$min-vw : 400px; // Minimum Window width
+	$max-vw : 1380px; // Maximum Window width
     // font sizing
 	// font-size: calc( (100vw - $min-vw) / (unit($max-vw) - unit($min-vw)") * ("unit($max-fs) - unit($min-fs)") +" $min-fs);
   	@media (max-width: $min-vw) { font-size: $min-fs; }
-  	@media (min-width: $max-vw) { font-size: $max-fs; }
+  	@media (min-width: $min-vw) { font-size: $max-fs; }
+	// font-size: calc( (100vmin - $min-vw) / ;
 }
 
 body {
@@ -23,13 +74,14 @@ body {
 .lower { text-transform: lowercase; }
 .upper { text-transform: uppercase; }
 .text-right { text-align: right; }
+.italic { font-style: italic }
 
 // Font weight
 .w100, .thin { font-weight: 100; }
 .w200, .extra_light { font-weight: 200; }
 .w300, .light { font-weight: 300; }
 .w400, .normal{ font-weight: 400; }
-.w500, .medium,  { font-weight: 500; }
+.w500, .medium { font-weight: 500; }
 .w600, .bold { font-weight: 600; }
 
 h1, .h1 {
@@ -38,6 +90,9 @@ h1, .h1 {
 	font-family: $montserrat;
 	letter-spacing: .19px;
 	line-height: 1;
+	display: flex;
+	flex-flow: column;
+
 	span.headline_break {
 		font-family: $roboto;
 		letter-spacing: .6px;
@@ -59,7 +114,7 @@ h2, .h2 {
 	font-style: italic;
 	font-weight: 300;
 	@media (max-width: 600px) {
-		font-size: 1.45rem;
+		font-size: 1.35rem;
 	}
 } // = 36px / 16 (base rem size)
 
@@ -76,8 +131,7 @@ h3, .h3 {
 
 	&.feature-title {
 		font-size: 3.6rem;
-		padding-bottom: 1.25rem;
-		line-height: 1;
+		line-height: .7; // currently using to balance the padding around child elements
 		font-weight: 300;
 	}
 } // = px / 16 (base rem size)
@@ -87,7 +141,19 @@ h4, .h4 {
 	font-family: $montserrat;
 	font-style: italic;
 	color: $church-primary;
-
+	line-height: .8;
+	padding-bottom: 1rem;
+	.line-two {
+		font-weight: 500;
+		font-style: normal;
+		font-family: $montserrat;
+		color: $secondary;
+		font-size: 1.5rem;
+		&:before {
+			content: '\a';
+			white-space: pre;
+		}
+	}
 } // = px / 16 (base rem size)
 
 h5, .h5 {
@@ -108,9 +174,31 @@ h6, .h6 {
 }
 
 p {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	font-family: $roboto;
 	// color: $secondary;
+	color: inherit;
 	font-weight: 300;
-	padding-top: .5rem;
+	line-height: inherit;
+	// padding-top: .5rem;
+}
+
+.tagline {
+	display: inline;
+	line-height: 0.9;
+	&:not(:first-child):before {
+		content: "•";
+		display: inline;
+		vertical-align: middle;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	&__cta {
+		color: $whiteish;
+		font-family: $roboto;
+		font-weight: 500;
+		font-size: 1.3rem;
+		padding-bottom: .75rem;
+	}
 }

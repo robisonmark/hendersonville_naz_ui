@@ -57,3 +57,6 @@ npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 ```sh
 npm run lint
 ```
+
+### Explore for project
+https://codyhouse.co/blog/post/css-custom-properties-vs-sass-variables

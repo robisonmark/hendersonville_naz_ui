@@ -2,8 +2,12 @@
   <div class="col-4 card full-image_container">
     <div
       class="full-image"
-      :style="{ backgroundImage: 'url(' + cardImage + ')' }"
     >
+    <!-- <div
+      class="full-image"
+      :style="{ backgroundImage: 'url(' + cardImage + ')' }"
+    > -->
+      <img :src="cardImage" />
       <h6>{{ cardTitle }}</h6>
     </div>
   </div>
@@ -47,6 +51,7 @@ export default defineComponent({
     height: 100%;
     width: 100%;
     mix-blend-mode: darken;
+    z-index: 1;
   }
 
   &:after {
@@ -59,6 +64,11 @@ export default defineComponent({
     mix-blend-mode: darken;
     clip-path: ellipse(85% 50% at 50% 50%);
   }
+}
+img {
+  position: absolute;
+  width: auto;
+  // height: 100%;
 }
 h6 {
   position: absolute;
