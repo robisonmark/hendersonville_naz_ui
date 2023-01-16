@@ -31,5 +31,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           source: "./dist/*"
           target: "/var/www/hcn"
