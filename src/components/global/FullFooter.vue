@@ -8,12 +8,9 @@
             <div class="social">
               <h3>Follow Us <span class="accent long">On Social</span></h3>
               <div class="social-links">
-                <a href="https://www.facebook.com/HendersonvilleNaz"
-                  ><img src="" alt="Facebook"
-                /></a>
-                <a href="https://www.instagram.com/hendersonvillenaz/"
-                  ><img src="" alt="Instagram"
-                /></a>
+                <FacebookIcon></FacebookIcon>
+                <InstagramIcon></InstagramIcon>
+                <YoutubeIcon></YoutubeIcon>
               </div>
             </div>
             <div class="location">
@@ -87,6 +84,9 @@ export default defineComponent({
   },
 
   components: {
+    FacebookIcon,
+    InstagramIcon,
+    YoutubeIcon,
     FooterContainerTop,
   },
 });
