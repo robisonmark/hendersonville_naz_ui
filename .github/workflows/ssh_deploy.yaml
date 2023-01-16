@@ -21,5 +21,11 @@ jobs:
         run: npm install && npm run build
 
       - name: "SCP Files"
-        run: |
-          scp -r ./dist/* matt@138.197.100.63:~/hendersonville_naz_ui/dist && ssh matt@138.197.100.63 "mv ~/hendersonville_naz_ui/dist/* /var/www/hcn/"
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          source: "./dist/*"
+          target: "/var/www/hcn"
