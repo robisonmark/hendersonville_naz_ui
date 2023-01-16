@@ -1,0 +1,25 @@
+name: Deploy to DO Server
+
+on:
+  push:
+    branches:
+      - master
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: "Build Project"
+        uses: actions/setup-node@master
+        run: npm install && npm run build
+
+      - name: "SCP Files"
+        run: |
+          scp -r ./dist/* matt@138.197.100.63:~/hendersonville_naz_ui/dist && ssh matt@138.197.100.63 "mv ~/hendersonville_naz_ui/dist/* /var/www/hcn/"
