@@ -16,8 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: "Build Project"
+      - name: "Setup Node"
         uses: actions/setup-node@master
+        with:
+          node_version: 16
+
+      - name: "Build Projects"
         run: npm install && npm run build
 
       - name: "SCP Files"
