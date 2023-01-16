@@ -1,0 +1,36 @@
+☐ Social Media Icons
+☐ Social Media Links
+☐ https://purgecss.com/
+☐ Breeze Integration (EVENTS)
+    - https://help.pastorsline.com/en/articles/6084183-v3-getting-started-with-the-breeze-chms-integration
+    - https://app.breezechms.com/api#getting_started
+☐ Update SVG HCN Logo, 
+☐  Create one without the HCN, 
+☐  Create a White One
+
+Components For Contact Page
+
+
+Global Styles
+☐ body
+☐ font
+☐ helpers
+☐ Research on CSS Variables
+☐ Autoprefixer (?)
+
+Route for Home Page
+☐ 404
+☐ 500
+
+Custom Post Types - API Side
+☐ Ministries 
+☐ Staff
+
+Concerns to work out
+☐ Hosting
+✔ Nucules Drop down (engagment) @done(23-01-13 18:40)
+☐ Environmental Variables
+☐ Contact Us Protocols
+☐ Dark Mode
+☐ Google Analytics - env = prod
+☐ Google Maps -> Business Link

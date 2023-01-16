@@ -19,7 +19,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email Pastor Duane'
+        cta: 'Contact Pastor Duane'
       },
       id: 0
     }
@@ -37,7 +37,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email Jacob'
+        cta: 'Contact Jacob'
       },
       id: 1
     }
@@ -55,7 +55,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email '
+        cta: 'Contact '
       },
       id: 2
     }
@@ -73,7 +73,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email Pam'
+        cta: 'Contact Pam'
       },
       id: 3
     }
@@ -91,7 +91,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email Pastor Randy'
+        cta: 'Contact Pastor Randy'
       },
       id: 4
     }
@@ -109,7 +109,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email Pastor Brandon'
+        cta: 'Contact Pastor Brandon'
       },
       id: 5
     }
@@ -127,7 +127,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email Pastor Mark'
+        cta: 'Contact Pastor Mark'
       },
       id: 6
     }
@@ -145,7 +145,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email Pastor Terry'
+        cta: 'Contact Pastor Terry'
       },
       id: 7
     }
@@ -163,7 +163,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email Janet'
+        cta: 'Contact Janet'
       },
       id: 8
     }
@@ -181,7 +181,7 @@ const cards = [
       },
       tileButton: {
         url: '/',
-        cta: 'Email Christi'
+        cta: 'Contact Christi'
       },
       id: 9
     }
