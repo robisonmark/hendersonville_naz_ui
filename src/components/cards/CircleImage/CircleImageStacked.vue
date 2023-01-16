@@ -4,12 +4,12 @@
       <CircleImageContainer></CircleImageContainer>
     </div>
     <div class="tile-content">
-      <h5>Mark Robison</h5>
-      <h6>Community Life Pastor</h6>
+      <h5>{{data.tileContent.headline}}</h5>
+      <h6>{{data.tileContent.description}}</h6>
       <section class="tile-details">
         <!-- <b>Phone:</b> 502.381.2552 <br />
         <b>Email:</b> mark@hendersonvillenaz.org -->
-        <button class="tile-cta">Contact Mark</button>
+        <button class="tile-cta">{{data.tileButton.cta}}</button>
 
       </section>
     </div>
@@ -26,24 +26,11 @@ export default defineComponent({
   components: {
     CircleImageContainer,
   },
+
+  props: ['data'],
+
   setup() {
     return {
-      tileImage: {
-        url: "/SportsAndRecHero.jpg",
-        alt: "Softball",
-      },
-      tileContent: {
-        headline: "Men's Softball",
-        description:
-          "The men of HCN play softball Monday nights in Goodlettsville. Come join us.",
-        details: {
-          lines: ["Monday Nights", "April - May"],
-        },
-      },
-      tileButton: {
-        url: "/",
-        cta: "See Schedule",
-      },
     };
   },
 });
@@ -72,23 +59,6 @@ b {
 }
 
 .tile {
-  // &-circle {
-  //   display: grid;
-  //   grid-template-columns: 45% 10% 45%;
-  //   height: 220px;
-  // }
-  // &-image_circle {
-  //   grid-column: 1/3;
-  //   clip-path: ellipse(50% 50% at 50% 50%);
-  //   height: 150px;
-  //   width: 150px;
-  // }
-  // &-content {
-  //   grid-column: 3/3;
-  //   display: flex;
-  //   flex-flow: column;
-  //   justify-content: space-between;
-  // }
   &-description {
     font-family: $montserrat;
     font-weight: 300;
@@ -97,12 +67,8 @@ b {
     padding-top: 0.7rem;
   }
   &-details {
-     // font-size: 1rem;
-    // margin-top: 1rem;
     font-family: "Roboto", sans-serif;
-    // color: inherit;
     font-weight: 300;
-    // line-height: inherit;
     font-size: 0.9em;
     color: $primary;
     padding-top: 1.5rem;

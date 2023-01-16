@@ -41,6 +41,10 @@ $breakpoints: (
   &:has(.card) {
     justify-content: space-between;
   }
+
+  // &.justify-center {
+  //   justify-content: center;
+  // }
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
@@ -61,6 +65,11 @@ $breakpoints: (
     margin-left: -2rem;
   }
 }
+
+// .row.justify-center .card {
+//   margin-right: 0rem;
+//   margin-left: 0rem;
+// }
 
 .col {
   -ms-flex-preferred-size: 0;

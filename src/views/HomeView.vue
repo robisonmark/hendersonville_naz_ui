@@ -4,123 +4,184 @@ import ContentLeft from "../components/blocks/ContentLeft.vue";
 import FullWidthFeature from "@/components/blocks/fullWidthFeature/FullWidthFeature.vue";
 import CardRow from "@/components/blocks/CardRow.vue";
 
+const rowTitle = "Get To Know<span class='line-two'>Our Staff</span>"
 const cards = [
 {
-    component: "CircleImageStacked",
-    data: {
+  data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Duane Harris',
-      role: 'Lead Pastor',
-      picture: {
+      tileContent: {
+        headline: 'Duane Harris',
+        description: 'Lead Pastor',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email Pastor Duane'
       },
       id: 0
     }
   },
   {
-    component: "CircleImageStacked",
     data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Jacob Lagesse',
-      role: 'Worship Leader',
-      picture: {
+      tileContent: {
+        headline: 'Jacob Lagesse',
+        description: 'Worship Leader',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email Jacob'
       },
       id: 1
     }
   },
   {
-    component: "CircleImageStacked",
     data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Nick Groover',
-      role: 'Youth Pastor',
-      picture: {
+      tileContent: {
+        headline: 'Nick Groover',
+        description: 'Youth Pastor',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email '
       },
       id: 2
     }
   },
   {
-    component: "CircleImageStacked",
     data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Pam Gerdes',
-      role: 'Children\'s Director',
-      picture: {
+      tileContent: {
+        headline: 'Pam Gerdes',
+        description: 'Children\'s Director',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email Pam'
       },
       id: 3
     }
   },
   {
-    component: "CircleImageStacked",
     data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Randy Kinder',
-      role: 'Media & Communications Pastor',
-      picture: {
+      tileContent: {
+        headline: 'Randy Kinder',
+        description: 'Media & Communications Pastor',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email Pastor Randy'
       },
       id: 4
     }
   },
   {
-    component: "CircleImageStacked",
     data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Brandon Brown',
-      role: 'Discipleship Pastor',
-      picture: {
+      tileContent: {
+        headline: 'Brandon Brown',
+        description: 'Discipleship Pastor',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email Pastor Brandon'
       },
       id: 5
     }
   },
   {
-    component: "CircleImageStacked",
     data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Mark Robison',
-      role: 'Community Life Pastor',
-      picture: {
+      tileContent: {
+        headline: 'Mark Robison',
+        description: 'Community Life Pastor',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email Pastor Mark'
       },
       id: 6
     }
   },
   {
-    component: "CircleImageStacked",
     data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Terry Hedges',
-      role: 'Evangelism Pastor',
-      picture: {
+      tileContent: {
+        headline: 'Terry Hedges',
+        description: 'Evangelism Pastor',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email Pastor Terry'
       },
       id: 7
     }
   },
   {
-    component: "CircleImageStacked",
     data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Janet Spann',
-      role: 'Financial Manager',
-      picture: {
+      tileContent: {
+        headline: 'Janet Spann',
+        description: 'Financial Manager',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email Janet'
       },
       id: 8
     }
   },
   {
-    component: "CircleImageStacked",
     data: {
+      component: "CircleImageStacked",
       container: 'staff',
-      name: 'Christi Brown',
-      role: 'Office Administrator',
-      picture: {
+      tileContent: {
+        headline: 'Christi Brown',
+        description: 'Office Administrator',
+      },
+      tileImage: {
         url: '',
+      },
+      tileButton: {
+        url: '/',
+        cta: 'Email Christi'
       },
       id: 9
     }
@@ -144,9 +205,7 @@ const cards = [
   <full-hero></full-hero>
   <content-left></content-left>
   <full-width-feature></full-width-feature>
-  <div class="container">
-    <h4>Get To Know<span class="line-two">Our Staff</span></h4>
-    <card-row :cards="cards"></card-row>
-  </div>
+  
+  <card-row :cards="cards" :rowTitle="rowTitle" :cards-per-row="4"></card-row>
   <!-- <card-row :cards="tiles"></card-row> -->
 </template>
