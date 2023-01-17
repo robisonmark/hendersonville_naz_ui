@@ -44,14 +44,14 @@ export default defineComponent({
   },
   setup() {
     return {
-      featureBlockTitle: "Current Series",
+      featureBlockTitle: "Youth Winter Retreat 2023",
       featureBlockContent:
-        "<p>Journey with us as we take a look at the New Testament passages that changed the world. We will be studying the women at the well, the feeding of the 5000, Jesus' feet being anointed with oil and more.</p>",
+        "<p>If you are between 12 and 18, you don't want to miss the Lifeline's winter retreat.  They will be headed to Fall Creek Falls for a time of reset, refreshment, and rebranding themselves in mold of Christ.</p><p><strong>Cost: $75</strong></p><p><strong>Dates: Jan. 27-29</strong></p>",
       featureBlockCTA: {
         type: "GhostTwoLine",
         content: {
-          action: "Watch",
-          description: "Last Weeks Sermon",
+          action: "Contact Pastor Nick",
+          description: "for More Info",
         },
         link: "/",
       },

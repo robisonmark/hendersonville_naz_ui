@@ -56,7 +56,7 @@ const cards = [
       },
       tileButton: {
         url: "/",
-        cta: "Contact ",
+        cta: "Contact Pastor Nick",
       },
       id: 2,
     },
