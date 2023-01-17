@@ -2,189 +2,190 @@
 import FullHero from "../components/heros/FullWidthHero.vue";
 import ContentLeft from "../components/blocks/ContentLeft.vue";
 import FullWidthFeature from "@/components/blocks/fullWidthFeature/FullWidthFeature.vue";
+import MinistryFeature from "@/components/blocks/ministryFeature/MinistryFeature.vue";
 import CardRow from "@/components/blocks/CardRow.vue";
 
-const rowTitle = "Get To Know<span class='line-two'>Our Staff</span>"
+const rowTitle = "Get To Know<span class='line-two'>Our Staff</span>";
 const cards = [
-{
-  data: {
+  {
+    data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Duane Harris',
-        description: 'Lead Pastor',
+        headline: "Duane Harris",
+        description: "Lead Pastor",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact Pastor Duane'
+        url: "/",
+        cta: "Contact Pastor Duane",
       },
-      id: 0
-    }
+      id: 0,
+    },
   },
   {
     data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Jacob Lagesse',
-        description: 'Worship Leader',
+        headline: "Jacob Lagesse",
+        description: "Worship Leader",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact Jacob'
+        url: "/",
+        cta: "Contact Jacob",
       },
-      id: 1
-    }
+      id: 1,
+    },
   },
   {
     data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Nick Groover',
-        description: 'Youth Pastor',
+        headline: "Nick Groover",
+        description: "Youth Pastor",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact '
+        url: "/",
+        cta: "Contact Pastor Nick",
       },
-      id: 2
-    }
+      id: 2,
+    },
   },
   {
     data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Pam Gerdes',
-        description: 'Children\'s Director',
+        headline: "Pam Gerdes",
+        description: "Children's Director",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact Pam'
+        url: "/",
+        cta: "Contact Pam",
       },
-      id: 3
-    }
+      id: 3,
+    },
   },
   {
     data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Randy Kinder',
-        description: 'Media & Communications Pastor',
+        headline: "Randy Kinder",
+        description: "Media & Communications Pastor",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact Pastor Randy'
+        url: "/",
+        cta: "Contact Pastor Randy",
       },
-      id: 4
-    }
+      id: 4,
+    },
   },
   {
     data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Brandon Brown',
-        description: 'Discipleship Pastor',
+        headline: "Brandon Brown",
+        description: "Discipleship Pastor",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact Pastor Brandon'
+        url: "/",
+        cta: "Contact Pastor Brandon",
       },
-      id: 5
-    }
+      id: 5,
+    },
   },
   {
     data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Mark Robison',
-        description: 'Community Life Pastor',
+        headline: "Mark Robison",
+        description: "Community Life Pastor",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact Pastor Mark'
+        url: "/",
+        cta: "Contact Pastor Mark",
       },
-      id: 6
-    }
+      id: 6,
+    },
   },
   {
     data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Terry Hedges',
-        description: 'Evangelism Pastor',
+        headline: "Terry Hedges",
+        description: "Evangelism Pastor",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact Pastor Terry'
+        url: "/",
+        cta: "Contact Pastor Terry",
       },
-      id: 7
-    }
+      id: 7,
+    },
   },
   {
     data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Janet Spann',
-        description: 'Financial Manager',
+        headline: "Janet Spann",
+        description: "Financial Manager",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact Janet'
+        url: "/",
+        cta: "Contact Janet",
       },
-      id: 8
-    }
+      id: 8,
+    },
   },
   {
     data: {
       component: "CircleImageStacked",
-      container: 'staff',
+      container: "staff",
       tileContent: {
-        headline: 'Christi Brown',
-        description: 'Office Administrator',
+        headline: "Christi Brown",
+        description: "Office Administrator",
       },
       tileImage: {
-        url: '',
+        url: "",
       },
       tileButton: {
-        url: '/',
-        cta: 'Contact Christi'
+        url: "/",
+        cta: "Contact Christi",
       },
-      id: 9
-    }
+      id: 9,
+    },
   },
 ];
 
@@ -205,7 +206,9 @@ const cards = [
   <full-hero></full-hero>
   <content-left></content-left>
   <full-width-feature></full-width-feature>
-  
+
+  <ministry-feature></ministry-feature>
   <card-row :cards="cards" :rowTitle="rowTitle" :cards-per-row="4"></card-row>
+
   <!-- <card-row :cards="tiles"></card-row> -->
 </template>

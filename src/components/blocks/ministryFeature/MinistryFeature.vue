@@ -1,28 +1,20 @@
 <template>
-  <div class="feature--container__oval">
-    <FullWidthFeatureContainerTop></FullWidthFeatureContainerTop>
-    <!-- <FullWidthFeatureImageCircle></FullWidthFeatureImageCircle> -->
-    <div class="backer">
-      <div class="container">
-        <div class="row">
-          <div class="col feature--image">
-            <FullWidthFeatureImageCircle></FullWidthFeatureImageCircle>
-            <!-- <div class="feature-image_clip">
-              <img class="feature-image" :src="featureImage" />
-            </div> -->
-          </div>
-          <div class="col-5 content">
-            <h3 class="feature-title">{{ featureBlockTitle }}</h3>
-            <div class="feature-content" v-html="featureBlockContent"></div>
-            <ghost-two-line-button
-              v-model="featureBlockCTA.content"
-            ></ghost-two-line-button>
-          </div>
+  <div class="feature-ministry--container__oval">
+    <div class="container">
+      <div class="row">
+        <div class="col-7 content">
+          <h4 class="feature-ministry-title">{{ featureBlockTitle }}</h4>
+          <div
+            class="feature-ministry--content"
+            v-html="featureBlockContent"
+          ></div>
+          <ghost-two-line-button
+            v-model="featureBlockCTA.content"
+          ></ghost-two-line-button>
         </div>
+        <MinistryFeatureImage></MinistryFeatureImage>
       </div>
     </div>
-
-    <FullWidthFeatureContainerBottom></FullWidthFeatureContainerBottom>
   </div>
 </template>
 
@@ -30,28 +22,26 @@
 import { defineComponent } from "vue";
 
 // components
-import FullWidthFeatureContainerTop from "./FullWidthFeatureContainerTop.vue";
-import FullWidthFeatureContainerBottom from "./FullWidthFeatureContainerBottom.vue";
-import FullWidthFeatureImageCircle from "./FullWidthFeatureImageCircle.vue";
+import MinistryFeatureImage from "./MinistryFeatureImage.vue";
 import GhostTwoLineButton from "../../buttons/GhostTwoLine.vue";
 
 export default defineComponent({
   components: {
-    FullWidthFeatureContainerTop,
-    FullWidthFeatureContainerBottom,
-    FullWidthFeatureImageCircle,
+    MinistryFeatureImage,
     GhostTwoLineButton,
   },
   setup() {
     return {
-      featureBlockTitle: "Youth Winter Retreat 2023",
-      featureBlockContent:
-        "<p>If you are between 12 and 18, you don't want to miss the Lifeline's winter retreat.  They will be headed to Fall Creek Falls for a time of reset, refreshment, and rebranding themselves in mold of Christ.</p><p><strong>Cost: $75</strong></p><p><strong>Dates: Jan. 27-29</strong></p>",
+      featureBlockTitle: "Storehouse Ministries",
+      featureBlockContent: `<p><strong class="accent">Did you know</strong> that there are many children in our community who go to bed hungry every night?</p>
+        <p><strong class="accent">According to Feeding America,</strong> one in eight people and one in six children In Tennessee face hunger every single day. Almost 42% of households receiving benefits have children in them.*</p><p>The HCN Food Pantry can help bridge the gap for families and individuals who have a need in our community.Christ calls us to open our arms to those in need and we can do that on a most basic level by feeding hungry stomachs!</p>
+        <p><strong>We are open</strong> the 1st Saturday of every month from 10:00-11:30am and the 2nd & 4th Thursday of each month from 4:30pm-6:00pm or by appointment.</p>`,
       featureBlockCTA: {
         type: "GhostTwoLine",
         content: {
-          action: "Contact Pastor Nick",
-          description: "for More Info",
+          action: "Request",
+          description: "More Information",
+          modifier: "dark",
         },
         link: "/",
       },
@@ -125,6 +115,7 @@ export default defineComponent({
     order: 2;
     // height: 56vh;
     height: clamp(350px, 49vh, 500px);
+
     // height: clamp(35vh, calc(50vw - 16vh), 50vh);
   }
   .feature-content {
@@ -134,5 +125,9 @@ export default defineComponent({
     padding-bottom: 1.25rem;
     line-height: 1.2;
   }
+}
+
+.feature-ministry--content {
+  padding-block-end: 2rem;
 }
 </style>
