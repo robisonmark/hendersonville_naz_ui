@@ -1,13 +1,13 @@
 <template>
   <div class="container content_left">
     <div class="row">
-      <div class="col-auto col-sm-6">
+      <div class="col-auto col-sm-6 order-sm-2">
         <div :class="accent ? 'accent' : null">
           <h4>{{ sectionTitle }}</h4>
           <div class="content" v-html="sectionContent"></div>
         </div>
       </div>
-      <div class="col col-sm-6">
+      <div class="col col-sm-6 order-sm-1">
         <component
           v-for="(block, index) in rightSideComponents"
           :key="index"
@@ -36,7 +36,7 @@ export default defineComponent({
   },
   setup() {
     return {
-      accent: true,
+      accent: false,
       // This will be passed in props
       sectionTitle: "Making Disciples by the Water",
       sectionContent:
@@ -57,6 +57,7 @@ export default defineComponent({
                 action: "Join Us Live",
                 description: "Next Live Gathering at 10:30a",
                 overlap: true,
+                modifier: "primary",
               },
             },
           ],

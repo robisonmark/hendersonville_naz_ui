@@ -32,8 +32,8 @@ export default defineComponent({
       heroImage: "/Hero_Image_Placeholder.jpg",
       headline: "Hendersonville",
       headlineSecondLine: "Church of the Nazarene",
-      tagline: ["To Seek", "To Serve", "To Share"], // define rules and use polymorphism to break or keep together(?) or always send as list
-      information: "Sunday School 9:30a | Worship Gathering 10:30a", // needs note in admin saying the style of this will be all lower case
+      tagline: ["Loving", "Serving", "Sharing", "Becoming"], // define rules and use polymorphism to break or keep together(?) or always send as list
+      information: "Connect Groups 9:30a | Worship Gathering 10:30a", // needs note in admin saying the style of this will be all lower case
     };
   },
 

@@ -39,7 +39,10 @@ $breakpoints: (
   position: relative;
 
   &:has(.card) {
-    justify-content: space-between;
+    justify-content: center;
+    @media (min-width: map.get($breakpoints, 'lg')) {
+      justify-content: space-between;
+    }
   }
 
   // &.justify-center {
@@ -100,6 +103,20 @@ $breakpoints: (
     }
   }
 }
+
+// flex order
+.order-sm-1 {
+  @media (max-width: 600px) {
+    order: 1;
+  }
+}
+
+.order-sm-2 {
+  @media (max-width: 600px) {
+    order: 2;
+  }
+}
+
 
 // padding
 .p {

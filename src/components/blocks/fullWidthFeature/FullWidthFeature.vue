@@ -123,9 +123,17 @@ export default defineComponent({
     justify-content: center;
     align-items: flex-start;
     order: 2;
-    // height: 56vh;
-    height: clamp(350px, 49vh, 500px);
-    // height: clamp(35vh, calc(50vw - 16vh), 50vh);
+
+    @media (orientation: portrait) {
+      margin-top: -15vmin;
+      margin-bottom: 15vmin;
+    }
+
+    @media (orientation: landscape) {
+      // height: 56vh;
+      height: clamp(350px, 49vh, 500px);
+      // height: clamp(35vh, calc(50vw - 16vh), 50vh);
+    }
   }
   .feature-content {
     color: $primary-accent;

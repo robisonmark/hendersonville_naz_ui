@@ -1,10 +1,12 @@
 <template>
   <div class="col feature-ministry--image">
-    <img src="../../../assets/images/circleBackground.svg" class="background" />
-    <img
-      src="../../../assets/images/storehouse_min.png"
-      alt="Storehouse Ministries"
-    />
+    <div class="container">
+      <img src="../../../assets/images/circleBackground.svg" class="background" />
+      <img
+        src="../../../assets/images/storehouse_min.png"
+        alt="Storehouse Ministries"
+      />
+    </div>
   </div>
 </template>
 
@@ -20,9 +22,13 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.container {
+  position: relative;
+  width: 80%;
+}
 .feature-ministry--image {
   text-align: right;
-  img {
+  img:not(.background) {
     height: 80%;
   }
 }

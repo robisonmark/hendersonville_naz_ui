@@ -98,6 +98,7 @@ h1, .h1 {
 	line-height: 1;
 	display: flex;
 	flex-flow: column;
+	font-weight: 400;
 
 	span.headline_break {
 		font-family: $roboto;
@@ -205,7 +206,7 @@ p {
 
 	&__cta {
 		color: $whiteish;
-		font-family: $roboto;
+		font-family: $montserrat;
 		font-weight: 500;
 		font-size: 1.3rem;
 		padding-bottom: .75rem;

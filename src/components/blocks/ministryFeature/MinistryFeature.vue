@@ -53,15 +53,11 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import "../../../assets/scss/variables";
-.feature--container__oval {
+.feature-ministry--container__oval {
   width: 100%;
   margin-top: 3rem;
   margin-bottom: 3rem;
   position: relative;
-
-  .backer {
-    background-color: $secondary-accent;
-  }
 
   .container {
     position: relative;
@@ -117,6 +113,9 @@ export default defineComponent({
     height: clamp(350px, 49vh, 500px);
 
     // height: clamp(35vh, calc(50vw - 16vh), 50vh);
+    @media (orientation: portrait) {
+      margin-top: 25px;
+    }
   }
   .feature-content {
     color: $primary-accent;

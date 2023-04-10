@@ -8,12 +8,12 @@
 <script setup lang="ts">
 import GhostTwoLine from "../buttons/GhostTwoLine.vue";
 
-// types 
+// types
 type ComponentObject = {
   key: keyof ComponentObject;
   componentName: string;
   componentContent: string;
-  componentClass?: string;     
+  componentClass?: string;
 }
 
 const props = defineProps({
@@ -31,8 +31,12 @@ const components = props.modelValue?.reduce((acc: ComponentObject, curr: Compone
 
 <style lang="scss" scoped>
 .circle--overlap__centered {
-  position: absolute;
-  right: calc((45rem - 10rem) / (2 * 3.14));
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  padding-block-end: 3rem;
+//   position: absolute;
+//   right: calc((45rem - 10rem) / (2 * 3.14));
 }
 // xl size
 @media screen and (min-width: 1600px) {

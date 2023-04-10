@@ -18,15 +18,19 @@ const props = defineProps({
 @import "../../assets/scss/variables";
 .button {
   &__ghost {
-    border: 2px solid $primary-accent;
-    border-radius: 7px;
-    color: $primary-accent;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    min-width: 250px;
+      border: 2px solid $primary-accent;
+      border-radius: 7px;
+      color: $primary-accent;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      min-width: 250px;
+
+      @media (orientation: portrait) {
+        width: 100%; //consider iPad in portarit
+      }
 
     .action {
       font-family: $montserrat;
@@ -46,6 +50,17 @@ const props = defineProps({
       border: 2px solid $primary;
       .description {
         color: $church-primary;
+      }
+    }
+
+    &.primary {
+      background-color: $primary-accent;
+      border: 2px solid $primary-accent;
+      .action {
+        color: $primary;
+      }
+      .description {
+        color: $primary;
       }
     }
   }

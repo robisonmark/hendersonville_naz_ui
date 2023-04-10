@@ -45,12 +45,19 @@ export default defineComponent({
   top: clamp(-8rem, -10vh, -2rem);
   height: 70vh;
 
-  @media (orientation: portrait) {
+  @media (orientation: portrait) { // move to base style(?)
     position: relative;
     left: unset;
     margin: auto;
-    width: 70%;
+    // width: 70%;
     height: clamp(269px, 70vh, 861px);
+
+    position: relative;
+    left: unset;
+    height: auto;
+    max-width: unset;
+    margin: 0 20px;
+    top: -40%;
   }
 }
 </style>
