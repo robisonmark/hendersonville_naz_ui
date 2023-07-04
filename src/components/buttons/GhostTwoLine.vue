@@ -37,6 +37,14 @@ const props = defineProps({
       font-size: .9rem;
       text-transform: lowercase;
     }
+
+    @media (orientation: portrait) or (max-width: 400px) {
+      width: 100%;
+      border-radius: 0;
+      background-color: $primary-accent;
+      color: $primary;
+      margin-bottom: 3rem;
+    }
   }
 }
 </style>

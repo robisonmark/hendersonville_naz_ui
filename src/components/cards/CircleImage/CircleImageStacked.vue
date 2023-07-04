@@ -9,7 +9,7 @@
       <section class="tile-details">
         <!-- <b>Phone:</b> 502.381.2552 <br />
         <b>Email:</b> mark@hendersonvillenaz.org -->
-        <button class="tile-cta">{{data.tileButton.cta}}</button>
+        <a :href="`${data.tileButton.url}`"><button class="tile-cta">{{data.tileButton.cta}}</button></a>
 
       </section>
     </div>
@@ -57,6 +57,9 @@ h6 {
 b {
   font-weight: 400;
 }
+a {
+  text-decoration: none;
+}
 
 .tile {
   &-description {
@@ -86,8 +89,8 @@ b {
     grid-column-start: 1;
     grid-column-end: 4;
     margin: 1rem auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-block-end: 1rem;
+    padding-block-start: 1rem;
     &:hover {
       mix-blend-mode: darken;
     }

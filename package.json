@@ -17,6 +17,7 @@
     "@material-design-icons/font": "^0.11.1",
     "@material-design-icons/svg": "^0.11.1",
     "@svgv/webpack": "^0.1.0",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.0-beta1",
     "material-icons": "^1.10.11",
     "normalize.css": "^8.0.1",

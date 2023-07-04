@@ -38,7 +38,7 @@
             <li class="top-level">
               <RouterLink to="/events">Events</RouterLink>
             </li>
-            <li><button class="connect">Connect With Us</button></li>
+            <li><a href="mailto: office@hendersonvillenaz.org"><button class="connect">Connect With Us</button></a></li>
           </ul>
         </nav>
       </div>
@@ -316,7 +316,12 @@ header {
 .connect {
   border: 2px solid $primary-accent;
   padding: 5px;
-
+  @media (min-width: 600px) {
+    &:hover {
+      background-color: $primary-accent;
+      color: $primary;
+    }
+  }
   @media (max-width: 600px) {
     margin: 1rem auto;
     position: relative;

@@ -32,7 +32,7 @@ export default defineComponent({
       heroImage: "/Hero_Image_Placeholder.jpg",
       headline: "Hendersonville",
       headlineSecondLine: "Church of the Nazarene",
-      tagline: ["To Seek", "To Serve", "To Share"], // define rules and use polymorphism to break or keep together(?) or always send as list
+      tagline: ["Loving", "Seeking", "Sharing", "Becoming"], // define rules and use polymorphism to break or keep together(?) or always send as list
       information: "Sunday School 9:30a | Worship Gathering 10:30a", // needs note in admin saying the style of this will be all lower case
     };
   },
@@ -55,6 +55,7 @@ export default defineComponent({
   .container {
     position: relative;
     height: inherit;
+    max-height: inherit;
   }
 
   // this should move to the circle component itself
@@ -95,5 +96,12 @@ h1 {
   flex-flow: column;
   text-align: right;
   z-index: 1;
+}
+
+.tagline {
+  font-size: 1.20rem;
+  @media (min-width: 600px) {
+    font-size: 1.35rem;
+  }
 }
 </style>

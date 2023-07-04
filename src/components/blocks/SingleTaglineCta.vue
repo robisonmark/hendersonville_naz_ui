@@ -30,10 +30,10 @@ const components = props.modelValue?.reduce((acc: ComponentObject, curr: Compone
 </script>
 
 <style lang="scss" scoped>
-.circle--overlap__centered {
-  position: absolute;
-  right: calc((45rem - 10rem) / (2 * 3.14));
-}
+// .circle--overlap__centered {
+//   position: absolute;
+//   right: calc((45rem - 10rem) / (2 * 3.14));
+// }
 // xl size
 @media screen and (min-width: 1600px) {
   .circle--overlap__centered {
