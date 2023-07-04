@@ -1,5 +1,8 @@
 <template>
-  <button class="button__ghost">
+  <button
+    class="button__ghost"
+    :class="props?.modelValue?.modifier && props?.modelValue?.modifier"
+  >
     <div class="action">{{ props?.modelValue?.action }}</div>
     <div class="description">{{ props?.modelValue?.description }}</div>
   </button>
@@ -14,7 +17,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 @import "../../assets/scss/variables";
 .button {
-  &__ghost{
+  &__ghost {
     border: 2px solid $primary-accent;
     border-radius: 7px;
     color: $primary-accent;
@@ -29,12 +32,13 @@ const props = defineProps({
       font-family: $montserrat;
       font-weight: 500;
       font-size: 1.3rem;
+      text-transform: uppercase;
     }
 
     .description {
       font-family: $roboto;
       font-weight: 300;
-      font-size: .9rem;
+      font-size: 0.9rem;
       text-transform: lowercase;
     }
 
@@ -44,6 +48,13 @@ const props = defineProps({
       background-color: $primary-accent;
       color: $primary;
       margin-bottom: 3rem;
+    }
+    &.dark {
+      background-color: $primary;
+      border: 2px solid $primary;
+      .description {
+        color: $church-primary;
+      }
     }
   }
 }
