@@ -49,8 +49,14 @@ export default defineComponent({
     position: relative;
     left: unset;
     margin: auto;
-    width: 70%;
-    height: clamp(269px, 70vh, 861px);
+    // width: 70%;
+    // height: clamp(269px, 70vh, 861px);
+    top: clamp(-5rem, -7vh, -2rem);
+    width: auto;
+    height: auto;
+    max-height: 28vmax;
+    display: flex;
   }
+
 }
 </style>

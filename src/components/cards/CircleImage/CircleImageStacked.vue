@@ -1,5 +1,5 @@
 <template>
-  <div class="col-3 card tile-circle__stacked">
+  <div class="col-sm-3 card tile-circle__stacked">
     <div class="tile-image_circle">
       <CircleImageContainer></CircleImageContainer>
     </div>

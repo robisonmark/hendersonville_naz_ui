@@ -39,9 +39,13 @@ $breakpoints: (
   position: relative;
 
   &:has(.card) {
-    justify-content: space-between;
+    justify-content: center;
     padding-inline-start: 1rem;
     padding-inline-end: 1rem;
+
+    @media (min-width: map.get($breakpoints, 'sm')) {
+      justify-content: space-between;
+    }
   }
 
   // &.justify-center {
