@@ -126,6 +126,7 @@ export default defineComponent({
     // height: 56vh;
     height: clamp(350px, 49vh, 500px);
     // height: clamp(35vh, calc(50vw - 16vh), 50vh);
+    padding-left: 6%;
   }
   .feature-content {
     color: $primary-accent;
