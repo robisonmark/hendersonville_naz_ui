@@ -28,14 +28,14 @@
             <div class="office_hours">
               <h3>Office <span class="accent">Hours</span></h3>
               <ul>
-                <li>Monday</li>
-                <li>Tuesday</li>
-                <li>Wednesday</li>
-                <li>Thursday</li>
-                <li>Friday</li>
+                <li>Monday 8:30 - 3:30</li>
+                <li>Tuesday 8:30 - 3:30</li>
+                <li>Wednesday 12:30 - 6:00</li>
+                <li>Thursday 8:30 - 3:30</li>
+                <li>Friday Close</li>
                 <li class="pt-1"></li>
-                <li>Sunday: Connect Groups</li>
-                <li>Sunday: Worship Gathering</li>
+                <li>Sunday: Connect Groups 9:30am</li>
+                <li>Sunday: Worship Gathering 10:30am</li>
               </ul>
             </div>
           </div>
@@ -100,7 +100,13 @@ footer {
   .footer__background {
     background-color: $church-primary;
     position: relative;
-    padding-bottom: 2rem;
+    padding-block-end: 2rem;
+    @media (max-width: 600px) {
+      padding-block-end: 5rem;
+      .row {
+        padding-block-start: 1rem;;
+      }
+    }
   }
   & > :not(h3) {
     color: $church-secondary;
@@ -148,6 +154,15 @@ footer {
       padding-right: .5rem;
     }
   }
+}
+
+.quick_links {
+  @media (max-width: 600px) {
+    flex-basis: 100%;
+    text-align: left;
+    padding-block-start: 2rem;
+  }
+  
 }
 
 .disclaimers {
