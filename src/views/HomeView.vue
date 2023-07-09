@@ -19,23 +19,23 @@
 
   const rowTitle = "Get To Know<span class='line-two'>Our Staff</span>"
   const cards = [
-  {
-    data: {
-        component: "CircleImageStacked",
-        container: 'staff',
-        tileContent: {
-          headline: 'Duane Harris',
-          description: 'Lead Pastor',
-        },
-        tileImage: {
-          url: '',
-        },
-        tileButton: {
-          url: 'mailto: duane@hendersonvillenaz.org',
-          cta: 'Contact Pastor Duane'
-        },
-        id: 0
-      }
+    {
+      data: {
+          component: "CircleImageStacked",
+          container: 'staff',
+          tileContent: {
+            headline: 'Duane Harris',
+            description: 'Lead Pastor',
+          },
+          tileImage: {
+            url: '',
+          },
+          tileButton: {
+            url: 'mailto: duane@hendersonvillenaz.org',
+            cta: 'Contact Pastor Duane'
+          },
+          id: 0
+        }
     },
     {
       data: {
@@ -86,7 +86,7 @@
         },
         tileButton: {
           url: 'mailto: morgan@hendersonvillenaz.org',
-          cta: 'Contact Pam'
+          cta: 'Contact Morgan'
         },
         id: 3
       }

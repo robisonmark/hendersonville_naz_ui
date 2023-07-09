@@ -43,7 +43,7 @@ $breakpoints: (
     padding-inline-start: 1rem;
     padding-inline-end: 1rem;
 
-    @media (min-width: map.get($breakpoints, 'sm')) {
+    @media (min-width: map.get($breakpoints, 'md')) {
       justify-content: space-between;
     }
   }
@@ -69,6 +69,10 @@ $breakpoints: (
     padding-left: 2rem;
     margin-right: -1rem;
     margin-left: -1rem;
+    @media (min-width: map.get($breakpoints, 'md')) {
+      margin-right: -2rem;
+      margin-left: -2rem;
+    }
   }
 }
 
@@ -123,5 +127,20 @@ $breakpoints: (
     @media (max-width: 600px) {
       order: 2;
     }
+  }
+}
+
+.gridRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  gap: 1rem;
+  /* padding: 2rem; */
+  /* background-color: #222629; */
+  color: #fff;
+  justify-items: center;
+
+  .card {
+    padding: 0;
   }
 }

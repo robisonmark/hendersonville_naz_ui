@@ -36,5 +36,6 @@ export default defineComponent({
 
 #heroCircle {
   max-width: calc($content-max-width * 0.7);
+  mix-blend-mode: multiply;
 }
 </style>

@@ -1,8 +1,13 @@
 <template>
   <div class="container">
     <h4 v-html="rowTitle"></h4>
+    <div class="gridRow">
+      <template v-for="(card, index) in cards" :key="index">
+          <component :is="card.data.component" :data="card.data"></component>
+      </template>
+    </div>
 
-    <div class="row" v-for="(row, key) in rows.values()" :key="key" :class="row.length < cardsPerRow && 'justify-center'" >
+    <!-- <div class="row" v-for="(row, key) in rows.values()" :key="key" :class="row.length < cardsPerRow && 'justify-center'" >
       <template v-if="row.length < cardsPerRow"><div class="card" :class="`col-${12 / cardsPerRow}`"></div></template>
 
       <template v-for="(card, index) in row" :key="index">
@@ -10,7 +15,7 @@
       </template>
 
       <template v-if="row.length < cardsPerRow"><div class="card" :class="`col-${12 / cardsPerRow}`"></div></template>
-    </div>
+    </div> -->
   </div>
 </template>
 

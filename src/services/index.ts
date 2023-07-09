@@ -13,7 +13,7 @@ class ApiService {
             baseURL: this.baseUrl,
             headers: {
                 'Content-type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
+                // 'Access-Control-Allow-Origin': '*',
                 // 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
                 // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
             }
