@@ -40,10 +40,17 @@ export default defineComponent({
 
 #feature-image_clip {
   position: absolute;
-  left: -4%;
+  left: min(-4%, calc(1464px - 1600px));
   max-width: calc($content-max-width + 8vw);
   top: clamp(-8rem, -10vh, -2rem);
   height: 70vh;
+  height: clamp(350px, 70vh, 966px);
+
+  @media all and (max-width: 980px) {
+    left:unset;
+    right: 0px;
+}
+
 
   @media (orientation: portrait) {
     position: relative;
